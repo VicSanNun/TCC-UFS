@@ -1,0 +1,152 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sat Oct 14 01:01:49 2006}
+%TCIDATA{LastRevised=Wednesday, July 07, 2021 09:30:17}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Journal Articles\Standard LaTeX Article">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\textheight=26.5cm
+\textwidth=18cm
+\oddsidemargin=-1.0cm
+\evensidemargin=-1.0cm
+\topmargin=-2.5cm
+\def\baselinestretch{1.6}
+
+\begin{document}
+
+
+;
+
+\section{Spheroidal coordinates em N+1 dimens\~{o}es}
+
+;
+
+vamos combinar de nota\c{c}\~{o}es. usam essas mesmas!
+
+$a$ \'{e} uma constante; deixamos por enquanto, pode ser \'{u}til no futuro
+
+prolate spheroidal coordinates - two-sheet hypeboloids%
+\begin{eqnarray*}
+x &=&a\sinh v\sin \theta \cos \varphi  \\
+y &=&a\sinh v\sin \theta \sin \varphi  \\
+z &=&a\cosh v\cos \theta  \\
+0 &\leq &v<\infty ,\ 0\leq \theta \leq \pi ,\ 0\leq \varphi <2\pi 
+\end{eqnarray*}%
+\begin{eqnarray*}
+x &=&a\sinh v\sin \theta \cos \varphi  \\
+y &=&a\sinh v\sin \theta \sin \varphi  \\
+z &=&a\cosh v\cos \theta 
+\end{eqnarray*}%
+\begin{equation*}
+0\leq v<\infty ,\ 0\leq \theta \leq \pi ,\ 0\leq \varphi <2\pi 
+\end{equation*}%
+;
+
+oblate spheroidal coordinates - one-sheet hypeboloids - o nosso caso atual%
+\begin{eqnarray}
+x &=&a\cosh v\cos \theta \cos \varphi   \label{00-osc} \\
+y &=&a\cosh v\cos \theta \sin \varphi   \notag \\
+z &=&a\sinh v\sin \theta   \notag \\
+0 &\leq &v<\infty ,\ -\pi /2\leq \theta \leq \pi /2,\ 0\leq \varphi <2\pi  
+\notag
+\end{eqnarray}%
+temos o sistema de hiperboloides:%
+\begin{equation*}
+\frac{x^{2}+y^{2}}{a^{2}\cos ^{2}\theta }-\frac{z^{2}}{a^{2}\sin ^{2}\theta }%
+=1
+\end{equation*}%
+;
+
+depois passa para coordenadas%
+\begin{equation*}
+\xi =\sin \theta ,\ \zeta =\sinh v,\ \varphi
+\end{equation*}%
+$\frac{{}}{{}}$
+
+\textit{Uma observa\c{c}\~{a}o.}
+
+\{para prepara\c{c}\~{a}o para o caso de altas dimens\~{o}es e ter uma
+analogia com coordenadas esf\'{e}ricas e com a parametriza\c{c}\~{a}o de
+two-sheet hypeboloid \'{e} melhor usar a parametriza\c{c}\~{a}o um pouco
+diferente:%
+\begin{eqnarray}
+x &=&a\cosh v\sin \theta \cos \varphi   \label{00-osc2} \\
+y &=&a\cosh v\sin \theta \sin \varphi   \notag \\
+z &=&a\sinh v\cos \theta   \notag \\
+0 &\leq &v<\infty ,\ 0\leq \theta \leq \pi ,\ 0\leq \varphi <2\pi   \notag
+\end{eqnarray}%
+nesse caso as express\~{o}es para coeficientes m\'{e}tricos e para
+Laplaciano mudam. mas para dim 4 isso ja pode ser \'{u}til.
+
+\}
+
+$\frac{{}}{{}}$
+
+por enquanto na sua descri\c{c}\~{a}o vamos usar a parametriza\c{c}\~{a}o da
+forma (\ref{00-osc}) como est\'{a} no site
+
+na descri\c{c}\~{a}o deve obter a m\'{e}trica na forma expl\'{\i}cita para
+usa-lo na t\'{e}cnica do operador de Laplace-Beltrami e depois na eq de
+Dirac. para obter a metrica usa o material do Aleff.
+
+\{qual \'{e} arq do relatorio do Aleff vc tem? pode me enviar. vou fazer
+referecias na formulas desse arq.\}
+
+para usar a metodologia descrita no rel do Aleff vamos usar a parametriza%
+\c{c}\~{a}o da forma (\ref{00-osc2}) e a nota\c{c}\~{a}o de coord.s
+Cartesianas seguinte:%
+\begin{eqnarray*}
+x_{3} &=&a\sinh \chi \cos \theta _{2} \\
+x_{2} &=&a\cosh \chi \sin \theta _{2}\sin \theta _{1} \\
+x_{1} &=&a\cosh \chi \sin \theta _{2}\cos \theta _{1}
+\end{eqnarray*}%
+escrevemos o sistema de 2-hiperboloides como:%
+\begin{equation*}
+\frac{1}{a^{2}\sin ^{2}\theta _{2}}\sum_{i=1}^{2}x_{i}^{2}-\frac{1}{%
+a^{2}\cos ^{2}\theta _{2}}x_{N+1}^{2}=1
+\end{equation*}%
+quando passar para dimens\~{a}o 4 ser\'{a} mais f\'{a}cil generalizar:%
+\begin{eqnarray*}
+x_{4} &=&a\sinh \chi \cos \theta _{3} \\
+x_{3} &=&a\cosh \chi \sin \theta _{3}\cos \theta _{2} \\
+x_{2} &=&a\cosh \chi \sin \theta _{3}\sin \theta _{2}\sin \theta _{1} \\
+x_{1} &=&a\cosh \chi \sin \theta _{3}\sin \theta _{2}\cos \theta _{1}
+\end{eqnarray*}%
+temos nesse caso temos o sistema de 3-hiperboloides:%
+\begin{equation*}
+\frac{1}{a^{2}\sin ^{2}\theta _{3}}\sum_{i=1}^{3}x_{i}^{2}-\frac{1}{%
+a^{2}\cos ^{2}\theta _{3}}x_{4}^{2}=1
+\end{equation*}%
+na caso de dim $\left( N+1\right) $ temos o sistema de N-hiperboloides:%
+\begin{equation*}
+\frac{1}{a^{2}\sin ^{2}\theta _{N}}\sum_{i=1}^{N}x_{i}^{2}-\frac{1}{%
+a^{2}\cos ^{2}\theta _{N}}x_{N+1}^{2}=1
+\end{equation*}%
+e as coordenadas s\~{a}o%
+\begin{eqnarray*}
+x_{N+1} &=&a\sinh \chi \cos \theta _{N} \\
+x_{N} &=&a\cosh \chi \sin \theta _{N}\cos \theta _{N-1} \\
+x_{N-1} &=&a\cosh \chi \sin \theta _{N}\sin \theta _{N-1}\cos \theta _{N-2}
+\\
+&&... \\
+x_{3} &=&a\cosh \chi \sin \theta _{N}...\sin \theta _{3}\cos \theta _{2} \\
+x_{1} &=&a\cosh \chi \sin \theta _{N}...\sin \theta _{3}\sin \theta _{2}\cos
+\theta _{1} \\
+x_{2} &=&a\cosh \chi \sin \theta _{N}...\sin \theta _{3}\sin \theta _{2}\sin
+\theta _{1}
+\end{eqnarray*}%
+;
+
+\end{document}

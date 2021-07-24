@@ -1,0 +1,422 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sat Oct 14 01:01:49 2006}
+%TCIDATA{LastRevised=Thursday, July 08, 2021 23:04:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Journal Articles\Standard LaTeX Article">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\textheight=26.5cm
+\textwidth=18cm
+\oddsidemargin=-1.0cm
+\evensidemargin=-1.0cm
+\topmargin=-2.5cm
+\def\baselinestretch{1.6}
+\begin{document}
+
+
+;
+
+\section{operador de Laplace-Beltrami}
+
+;
+
+vamos aprender a t\'{e}cnica do operador de Laplace-Beltrami (LB)
+
+;
+
+Sec. 2.3 no [relAleff], p. 18 \{no arq tem erros de digita\c{c}\~{a}o\}
+
+;
+
+usando a parametriza\c{c}\~{a}o como est\'{a} no site;
+
+so trocados%
+\begin{equation*}
+x_{1}\leftrightarrow x_{2}
+\end{equation*}%
+\begin{eqnarray*}
+x_{3} &=&a\sinh \chi \sin \theta _{2} \\
+x_{2} &=&a\cosh \chi \cos \theta _{2}\cos \theta _{1} \\
+x_{1} &=&a\cosh \chi \cos \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ -\pi /2\leq \theta _{2}\leq \pi /2,\ 0\leq \theta
+_{1}<2\pi 
+\end{eqnarray*}%
+O operador de Laplace-Beltrami \'{e} definido como (implica soma por \'{\i}%
+ndices repetidos):%
+\begin{equation}
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\frac{\partial }{\partial
+q_{i}}\left( \sqrt{\left\vert g\right\vert }g^{ij}\frac{\partial u}{\partial
+q_{j}}\right) \ ,  \label{eq98}
+\end{equation}%
+onde $g_{ij}$ \'{e} o tensor m\'{e}trico, $g^{ij}$ \'{e} o tensor m\'{e}%
+trico inverso e$\ g$ \'{e} o determinante do tensor m\'{e}trico. O tensor m%
+\'{e}trico pode ser determinado como [! aqui precisa colocar refer\^{e}%
+ncia]: 
+\begin{equation}
+g_{ij}=\underset{k}{\sum }\frac{\partial x_{k}}{\partial q_{_{^{i}}}}\frac{%
+\partial x_{^{_{k}}}}{\partial q_{_{^{j}}}}=G^{T}G\ .  \label{eq99}
+\end{equation}%
+No nosso caso:%
+\begin{equation*}
+q_{1}=\theta _{1},\ q_{2}=\theta _{2},\ q_{3}=\chi 
+\end{equation*}%
+Para determinar $g_{ij},$ $g,$ $g^{ij}$ tenho o programa na Maxima (em anexo
+em .pdf), no programa $\theta _{1}\theta _{2}\theta _{3}$ denotadas por
+t1,t2,t3 e $\chi $ por $v.$ Como coordenadas s\~{a}o ortogonais, o tensor m%
+\'{e}trico \'{e} diagonal e pode ser escrito como%
+\begin{equation*}
+g_{ij}=diag\left( h_{1},h_{2},h_{3}\right) =diag\left(
+h_{1},h_{2},h_{2}\right) 
+\end{equation*}%
+\begin{equation*}
+h_{1}=a^{2}\cos ^{2}\theta _{2}\cosh ^{2}\chi ,\ h_{2}=h_{3}=a^{2}\left(
+\cos ^{2}\theta _{2}\sinh ^{2}\chi +\sin ^{2}\theta _{2}\cosh ^{2}\chi
+\right) 
+\end{equation*}%
+\begin{equation*}
+g^{ij}=g_{ij}^{-1}=diag\left( h_{1}^{-1},h_{2}^{-1},h_{3}^{-1}\right)
+=diag\left( h_{1}^{-1},h_{2}^{-1},h_{2}^{-1}\right) 
+\end{equation*}%
+\begin{equation*}
+\left\vert g\right\vert =h_{1}h_{2}h_{3}=h_{1}h_{2}^{2}
+\end{equation*}%
+com $\partial _{i}=\frac{\partial }{\partial q_{i}}$%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\frac{\partial }{\partial q_{i}}%
+\left( \sqrt{\left\vert g\right\vert }g^{ij}\frac{\partial u}{\partial q_{j}}%
+\right) =\frac{1}{\sqrt{\left\vert g\right\vert }}\partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\partial _{j}u\right) =\frac{1}{\sqrt{%
+\left\vert g\right\vert }}\left[ \partial _{i}\left( \sqrt{\left\vert
+g\right\vert }g^{ij}\right) \right] \partial _{j}u+g^{ij}\partial
+_{i}\partial _{j}u
+\end{equation*}%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\left[ \partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\right) \right] \partial _{j}u=\frac{1}{%
+2\left\vert g\right\vert }\left( \partial _{i}\left\vert g\right\vert
+\right) g^{ij}\partial _{j}u+\left( \partial _{i}g^{ij}\right) \partial _{j}u
+\end{equation*}%
+aqui%
+\begin{equation*}
+g^{ij}\partial _{i}\partial _{j}u=h_{1}^{-1}\partial
+_{1}^{2}u+h_{2}^{-1}\partial _{2}^{2}u+h_{3}^{-1}\partial
+_{3}^{2}u=h_{1}^{-1}\partial _{1}^{2}u+h_{2}^{-1}\partial
+_{2}^{2}u+h_{2}^{-1}\partial _{3}^{2}u=h_{1}^{-1}\partial
+_{1}^{2}u+h_{2}^{-1}\left( \partial _{2}^{2}u+\partial _{3}^{2}u\right) 
+\end{equation*}%
+;%
+\begin{equation*}
+\left( \partial _{i}g^{ij}\right) \partial _{j}u=\left( \partial
+_{1}h_{1}^{-1}\right) \left( \partial _{1}u\right) +\left( \partial
+_{2}h_{2}^{-1}\right) \left( \partial _{2}u\right) +\left( \partial
+_{3}h_{2}^{-1}\right) \left( \partial _{3}u\right) =\left( \partial
+_{2}h_{2}^{-1}\right) \left( \partial _{2}u\right) +\left( \partial
+_{3}h_{2}^{-1}\right) \left( \partial _{3}u\right) 
+\end{equation*}%
+pois $\left( \partial _{1}h_{1}^{-1}\right) =0$%
+\begin{equation*}
+=\left( -h_{2}^{-2}\right) \left( \partial _{2}h_{2}\right) \left( \partial
+_{2}u\right) +\left( -h_{2}^{-2}\right) \left( \partial _{3}h_{2}\right)
+\left( \partial _{3}u\right) 
+\end{equation*}%
+\begin{equation*}
+=-\frac{h_{1}}{h_{1}h_{2}^{2}}\left[ \left( \partial _{2}h_{2}\right) \left(
+\partial _{2}u\right) +\left( \partial _{3}h_{2}\right) \left( \partial
+_{3}u\right) \right] 
+\end{equation*}%
+\begin{equation*}
+=-\frac{h_{1}}{\left\vert g\right\vert }\left[ \left( \partial
+_{2}h_{2}\right) \left( \partial _{2}u\right) +\left( \partial
+_{3}h_{2}\right) \left( \partial _{3}u\right) \right] 
+\end{equation*}%
+pp%
+\begin{equation*}
+\left( \partial _{i}g^{ij}\right) \partial _{j}u=-\frac{h_{1}}{\left\vert
+g\right\vert }\left[ \left( \partial _{2}h_{2}\right) \left( \partial
+_{2}u\right) +\left( \partial _{3}h_{2}\right) \left( \partial _{3}u\right) %
+\right] 
+\end{equation*}%
+;%
+\begin{equation*}
+\left( \partial _{i}\left\vert g\right\vert \right) g^{ij}\partial
+_{j}u=\left( \partial _{1}\left\vert g\right\vert \right) h_{1}^{-1}\left(
+\partial _{1}u\right) +\left( \partial _{2}\left\vert g\right\vert \right)
+h_{2}^{-1}\left( \partial _{2}u\right) +\left( \partial _{3}\left\vert
+g\right\vert \right) h_{2}^{-1}\left( \partial _{3}u\right) 
+\end{equation*}%
+\begin{equation*}
+=\left( \partial _{2}\left\vert g\right\vert \right) h_{2}^{-1}\left(
+\partial _{2}u\right) +\left( \partial _{3}\left\vert g\right\vert \right)
+h_{2}^{-1}\left( \partial _{3}u\right) 
+\end{equation*}%
+pois $\left( \partial _{1}\left\vert g\right\vert \right) =0$ e 
+\begin{equation*}
+\partial _{i}\left\vert g\right\vert =\left( \partial _{i}h_{1}\right)
+h_{2}^{2}+2h_{1}h_{2}\left( \partial _{i}h_{2}\right) =h_{2}\left(
+h_{2}\left( \partial _{i}h_{1}\right) +2h_{1}\left( \partial
+_{i}h_{2}\right) \right) =\frac{\left\vert g\right\vert \left( h_{2}\left(
+\partial _{i}h_{1}\right) +2h_{1}\left( \partial _{i}h_{2}\right) \right) }{%
+h_{1}h_{2}},\ i=2,3
+\end{equation*}%
+pp%
+\begin{equation*}
+\left( \partial _{i}\left\vert g\right\vert \right) g^{ij}\partial _{j}u=%
+\frac{\left\vert g\right\vert \left( h_{2}\left( \partial _{2}h_{1}\right)
++2h_{1}\left( \partial _{2}h_{2}\right) \right) }{h_{1}h_{2}}%
+h_{2}^{-1}\left( \partial _{2}u\right) +\frac{\left\vert g\right\vert \left(
+h_{2}\left( \partial _{3}h_{1}\right) +2h_{1}\left( \partial
+_{3}h_{2}\right) \right) }{h_{1}h_{2}}h_{2}^{-1}\left( \partial _{3}u\right) 
+\end{equation*}%
+\begin{equation*}
+=\frac{\left\vert g\right\vert \left( h_{2}\left( \partial _{2}h_{1}\right)
++2h_{1}\left( \partial _{2}h_{2}\right) \right) }{h_{1}h_{2}^{2}}\left(
+\partial _{2}u\right) +\frac{\left\vert g\right\vert \left( h_{2}\left(
+\partial _{3}h_{1}\right) +2h_{1}\left( \partial _{3}h_{2}\right) \right) }{%
+h_{1}h_{2}^{2}}\left( \partial _{3}u\right) 
+\end{equation*}%
+\begin{equation*}
+=\left( h_{2}\left( \partial _{2}h_{1}\right) +2h_{1}\left( \partial
+_{2}h_{2}\right) \right) \left( \partial _{2}u\right) +\left( h_{2}\left(
+\partial _{3}h_{1}\right) +2h_{1}\left( \partial _{3}h_{2}\right) \right)
+\left( \partial _{3}u\right) 
+\end{equation*}%
+;%
+\begin{equation*}
+\frac{1}{2\left\vert g\right\vert }\left( \partial _{i}\left\vert
+g\right\vert \right) g^{ij}\partial _{j}u=\frac{1}{2\left\vert g\right\vert }%
+\left[ \left( h_{2}\left( \partial _{2}h_{1}\right) +2h_{1}\left( \partial
+_{2}h_{2}\right) \right) \left( \partial _{2}u\right) +\left( h_{2}\left(
+\partial _{3}h_{1}\right) +2h_{1}\left( \partial _{3}h_{2}\right) \right)
+\left( \partial _{3}u\right) \right] 
+\end{equation*}%
+ent\~{a}o%
+\begin{equation*}
+\frac{1}{2\left\vert g\right\vert }\left( \partial _{i}\left\vert
+g\right\vert \right) g^{ij}\partial _{j}u=\frac{1}{2\left\vert g\right\vert }%
+\left[ \left( h_{2}\left( \partial _{2}h_{1}\right) +2h_{1}\left( \partial
+_{2}h_{2}\right) \right) \left( \partial _{2}u\right) +\left( h_{2}\left(
+\partial _{3}h_{1}\right) +2h_{1}\left( \partial _{3}h_{2}\right) \right)
+\left( \partial _{3}u\right) \right] 
+\end{equation*}%
+\begin{equation*}
+\left( \partial _{i}g^{ij}\right) \partial _{j}u=-\frac{h_{1}}{\left\vert
+g\right\vert }\left[ \left( \partial _{2}h_{2}\right) \left( \partial
+_{2}u\right) +\left( \partial _{3}h_{2}\right) \left( \partial _{3}u\right) %
+\right] 
+\end{equation*}%
+pp%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\left[ \partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\right) \right] \partial _{j}u=\frac{1}{%
+2\left\vert g\right\vert }\left( \partial _{i}\left\vert g\right\vert
+\right) g^{ij}\partial _{j}u+\left( \partial _{i}g^{ij}\right) \partial _{j}u
+\end{equation*}%
+\begin{eqnarray*}
+&=&\frac{1}{2\left\vert g\right\vert }\left[ \left( h_{2}\left( \partial
+_{2}h_{1}\right) +2h_{1}\left( \partial _{2}h_{2}\right) \right) \left(
+\partial _{2}u\right) +\left( h_{2}\left( \partial _{3}h_{1}\right)
++2h_{1}\left( \partial _{3}h_{2}\right) \right) \left( \partial _{3}u\right) %
+\right]  \\
+&&-\frac{h_{1}}{\left\vert g\right\vert }\left[ \left( \partial
+_{2}h_{2}\right) \left( \partial _{2}u\right) +\left( \partial
+_{3}h_{2}\right) \left( \partial _{3}u\right) \right] 
+\end{eqnarray*}%
+\begin{eqnarray*}
+&=&\frac{1}{2\left\vert g\right\vert }\left[ \left( h_{2}\left( \partial
+_{2}h_{1}\right) +2h_{1}\left( \partial _{2}h_{2}\right) \right)
+-2h_{1}\left( \partial _{2}h_{2}\right) \right] \left( \partial _{2}u\right) 
+\\
+&&+\frac{1}{2\left\vert g\right\vert }\left[ \left( h_{2}\left( \partial
+_{3}h_{1}\right) +2h_{1}\left( \partial _{3}h_{2}\right) \right)
+-2h_{1}\left( \partial _{3}h_{2}\right) \right] \left( \partial _{3}u\right) 
+\end{eqnarray*}%
+\begin{equation*}
+=\frac{h_{2}}{2\left\vert g\right\vert }\left[ \left( \partial
+_{2}h_{1}\right) \left( \partial _{2}u\right) +\left( \partial
+_{3}h_{1}\right) \left( \partial _{3}u\right) \right] 
+\end{equation*}%
+ent\~{a}o%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\left[ \partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\right) \right] \partial _{j}u=\frac{h_{2}}{%
+2\left\vert g\right\vert }\left[ \left( \partial _{2}h_{1}\right) \left(
+\partial _{2}u\right) +\left( \partial _{3}h_{1}\right) \left( \partial
+_{3}u\right) \right] 
+\end{equation*}%
+e%
+\begin{equation*}
+\left( \partial _{2}h_{1}\right) =-2a^{2}\cos \theta _{2}\cosh ^{2}\chi \sin
+\theta _{2}=-2h_{1}\frac{\sin \theta _{2}}{\cos \theta _{2}}=-2h_{1}\tan
+\theta _{2}
+\end{equation*}%
+\begin{equation*}
+\left( \partial _{3}h_{1}\right) =2a^{2}\cos ^{2}\theta _{2}\cosh \chi \sinh
+\chi =2h_{1}\frac{\sinh \chi }{\cosh \chi }=2h_{1}\tanh \chi 
+\end{equation*}%
+pp%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\left[ \partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\right) \right] \partial _{j}u=\frac{h_{2}}{%
+2\left\vert g\right\vert }\left[ -2h_{1}\tan \theta _{2}\left( \partial
+_{2}u\right) +2h_{1}\tanh \chi \left( \partial _{3}u\right) \right] 
+\end{equation*}%
+\begin{equation*}
+=\frac{2h_{2}h_{1}}{2h_{1}h_{2}^{2}}\left[ -\tan \theta _{2}\left( \partial
+_{2}u\right) +\tanh \chi \left( \partial _{3}u\right) \right] 
+\end{equation*}%
+\begin{equation*}
+=\frac{1}{h_{2}}\left[ -\tan \theta _{2}\left( \partial _{2}u\right) +\tanh
+\chi \left( \partial _{3}u\right) \right] 
+\end{equation*}%
+pp%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\partial _{j}u\right) =\frac{1}{\sqrt{%
+\left\vert g\right\vert }}\left[ \partial _{i}\left( \sqrt{\left\vert
+g\right\vert }g^{ij}\right) \right] \partial _{j}u+g^{ij}\partial
+_{i}\partial _{j}u
+\end{equation*}%
+\begin{equation*}
+=\frac{1}{h_{2}}\left[ -\tan \theta _{2}\left( \partial _{2}u\right) +\tanh
+\chi \left( \partial _{3}u\right) \right] +h_{1}^{-1}\partial
+_{1}^{2}u+h_{2}^{-1}\left( \partial _{2}^{2}u+\partial _{3}^{2}u\right) 
+\end{equation*}%
+\begin{equation*}
+=\frac{1}{h_{2}}\left[ -\tan \theta _{2}\left( \partial _{2}u\right) +\tanh
+\chi \left( \partial _{3}u\right) +\partial _{2}^{2}u+\partial _{3}^{2}u%
+\right] +\frac{1}{h_{1}}\partial _{1}^{2}u
+\end{equation*}%
+\begin{equation*}
+=\frac{1}{h_{2}}\left[ -\tan \theta _{2}\left( \partial _{2}u\right)
++\partial _{2}^{2}u+\tanh \chi \left( \partial _{3}u\right) +\partial
+_{3}^{2}u\right] +\frac{1}{h_{1}}\partial _{1}^{2}u
+\end{equation*}%
+aqui%
+\begin{equation*}
+\left[ -\tan \theta _{2}\left( \partial _{2}u\right) +\partial
+_{2}^{2}u+\tanh \chi \left( \partial _{3}u\right) +\left( \partial
+_{3}^{2}u\right) \right] =\frac{1}{\cos \theta _{2}}\partial _{2}\left( \cos
+\theta _{2}\partial _{2}u\right) +\frac{1}{\cosh \chi }\partial _{3}\left(
+\cosh \chi \partial _{3}u\right) 
+\end{equation*}%
+pp%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\partial _{j}u\right) =
+\end{equation*}%
+\begin{equation*}
+=\frac{1}{h_{2}}\left[ \frac{1}{\cos \theta _{2}}\partial _{2}\left( \cos
+\theta _{2}\partial _{2}u\right) +\frac{1}{\cosh \chi }\partial _{3}\left(
+\cosh \chi \partial _{3}u\right) \right] +\frac{1}{h_{1}}\partial _{1}^{2}u
+\end{equation*}%
+aplicando 
+\begin{equation*}
+h_{1}=a^{2}\cos ^{2}\theta _{2}\cosh ^{2}\chi ,\ h_{2}=h_{3}=a^{2}\left(
+\cos ^{2}\theta _{2}\sinh ^{2}\chi +\sin ^{2}\theta _{2}\cosh ^{2}\chi
+\right) 
+\end{equation*}%
+obtemos%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\partial _{j}u\right) =
+\end{equation*}%
+\begin{eqnarray*}
+&=&\frac{1}{a^{2}\left( \cos ^{2}\theta _{2}\sinh ^{2}\chi +\sin ^{2}\theta
+_{2}\cosh ^{2}\chi \right) }\left[ \frac{1}{\cos \theta _{2}}\partial
+_{2}\left( \cos \theta _{2}\partial _{2}u\right) +\frac{1}{\cosh \chi }%
+\partial _{3}\left( \cosh \chi \partial _{3}u\right) \right]  \\
+&&+\frac{1}{a^{2}\cos ^{2}\theta _{2}\cosh ^{2}\chi }\partial _{1}^{2}u
+\end{eqnarray*}%
+observamos tamb\'{e}m que 
+\begin{equation*}
+\left( \cos ^{2}\theta _{2}\sinh ^{2}\chi +\sin ^{2}\theta _{2}\cosh
+^{2}\chi \right) =\left( 1-\sin ^{2}\theta _{2}\right) \sinh ^{2}\chi +\sin
+^{2}\theta _{2}\cosh ^{2}\chi 
+\end{equation*}%
+\begin{equation*}
+=\sinh ^{2}\chi +\sin ^{2}\theta _{2}\left( \cosh ^{2}\chi -\sinh ^{2}\chi
+\right) =\sinh ^{2}\chi +\sin ^{2}\theta _{2}
+\end{equation*}%
+e podemos escrever%
+\begin{equation*}
+\frac{1}{\sqrt{\left\vert g\right\vert }}\partial _{i}\left( \sqrt{%
+\left\vert g\right\vert }g^{ij}\partial _{j}u\right) =
+\end{equation*}%
+\begin{eqnarray*}
+&=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\sin ^{2}\theta _{2}\right) }\left[ 
+\frac{1}{\cos \theta _{2}}\partial _{2}\left( \cos \theta _{2}\partial
+_{2}u\right) +\frac{1}{\cosh \chi }\partial _{3}\left( \cosh \chi \partial
+_{3}u\right) \right]  \\
+&&+\frac{1}{a^{2}\cos ^{2}\theta _{2}\cosh ^{2}\chi }\partial _{1}^{2}u
+\end{eqnarray*}%
+Finalmente obtemos o Laplaciano na coordenadas esferoidais:%
+\begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\sin ^{2}\theta
+_{2}\right) }\left[ \frac{1}{\cos \theta _{2}}\partial _{2}\left( \cos
+\theta _{2}\partial _{2}u\right) +\frac{1}{\cosh \chi }\partial _{3}\left(
+\cosh \chi \partial _{3}u\right) \right]  \\
+&&+\frac{1}{a^{2}\cos ^{2}\theta _{2}\cosh ^{2}\chi }\partial _{1}^{2}u
+\end{eqnarray*}%
+ou 
+\begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\sin ^{2}\theta
+_{2}\right) }\left[ \frac{1}{\cos \theta _{2}}\frac{\partial }{\partial
+\theta _{2}}\left( \cos \theta _{2}\frac{\partial u}{\partial \theta _{2}}%
+\right) +\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh
+\chi \frac{\partial u}{\partial \chi }\right) \right]  \\
+&&+\frac{1}{a^{2}\cos ^{2}\theta _{2}\cosh ^{2}\chi }\frac{\partial ^{2}u}{%
+\partial \theta _{1}^{2}}
+\end{eqnarray*}%
+;
+
+\section{proxima etapa}
+
+;
+
+obter Laplaciano na parametriza\c{c}\~{a}o%
+\begin{eqnarray*}
+x_{3} &=&a\sinh \chi \cos \theta _{2} \\
+x_{2} &=&a\cosh \chi \sin \theta _{2}\cos \theta _{1} \\
+x_{1} &=&a\cosh \chi \sin \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ 0\leq \theta _{2}\leq \pi ,\ 0\leq \theta _{1}<2\pi 
+\end{eqnarray*}%
+e depois passar para dimens\~{a}o 4.
+
+Na dimens\~{a}o 4 usamos as coordenadas:%
+\begin{eqnarray*}
+x_{4} &=&a\sinh \chi \cos \theta _{3} \\
+x_{3} &=&a\cosh \chi \sin \theta _{3}\cos \theta _{2} \\
+x_{1} &=&a\cosh \chi \sin \theta _{3}\sin \theta _{2}\cos \theta _{1} \\
+x_{2} &=&a\cosh \chi \sin \theta _{3}\sin \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ 0\leq \theta _{3},\theta _{2}\leq \pi ,\ 0\leq
+\theta _{1}<2\pi 
+\end{eqnarray*}%
+por motivo da simetria na parametriza\c{c}\~{a}o \'{e} trocado $%
+x_{1}\leftrightarrow x_{2},$ facilita os calculos (mas nesse caso surge uma
+quest\~{a}o de orienta\c{c}\~{a}o de eixos de coordenadas; isso n\~{a}o \'{e}
+dr\'{a}stico, mas guardamos isso na mente).
+
+ent\~{a}o, usaremos coordenadas:%
+\begin{eqnarray*}
+x_{4} &=&a\sinh \chi \cos \theta _{3} \\
+x_{3} &=&a\cosh \chi \sin \theta _{3}\cos \theta _{2} \\
+x_{2} &=&a\cosh \chi \sin \theta _{3}\sin \theta _{2}\cos \theta _{1} \\
+x_{1} &=&a\cosh \chi \sin \theta _{3}\sin \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ 0\leq \theta _{3},\theta _{2}\leq \pi ,\ 0\leq
+\theta _{1}<2\pi 
+\end{eqnarray*}%
+;
+
+\end{document}

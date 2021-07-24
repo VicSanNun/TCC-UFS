@@ -1,0 +1,416 @@
+\documentclass[12pt, a4papper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc}
+\newtheorem{defi}{Definição}[subsection]
+\newtheorem{teor}{Teorema}[subsection]
+\newtheorem{demo}{Demonstração}[subsection]
+\newtheorem{nota}{Notação}[subsection]
+\newtheorem{coro}{Corolário}[subsection]
+
+\begin{document}
+De modo geral, para verificar a ortogonalidade do sistema de coordenadas
+é necessário verificar se os vetores da base do sistema ($\boldsymbol{e}_{i}$)
+são ortogonais. Para isso, basta verificar se o produto escalar, entre
+dois vetores da base, é nulo ou seja:
+
+\[
+\boldsymbol{e}_{i}\cdot\boldsymbol{e}_{j}=0
+\]
+
+Porém, antes disso, é necessário encontrar os vetores da base. Para
+isto, basta tomar $\boldsymbol{r}(q_{1},q_{2},q_{3},...,q_{n})$ e
+tem-se o seguinte:
+
+\[
+\boldsymbol{e}_{i}=\frac{\partial\boldsymbol{r}}{\partial q_{i}}
+\]
+
+
+\section*{Verificando Ortogonalidade do Hiperbolóide 3-dim (3-Hiperboloide?)
+de 1 Folha}
+
+Verificar a ortogonalidade do seguinte sistema de coordenadas
+
+\begin{eqnarray*}
+x_{3} & = & a\sinh\chi\cos\theta_{2}\\
+x_{2} & = & a\cosh\chi\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\cosh\chi\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+Define-se
+
+\[
+\boldsymbol{r=}(a\cosh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+(a\cosh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+(a\sinh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}
+\]
+
+Tem-se
+
+\[
+\boldsymbol{e}_{\theta_{1}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{1}}=\left(\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+=\left(a\,cosh(\chi)cos(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{i}}-a\,cosh(\chi)sin(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{j}}+0\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{2}}=\left(\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+=\left(a\,cosh(\chi)sin(\theta_{1})cos(\theta_{2})\boldsymbol{\widehat{i}}+a\,cosh(\chi)cos(\theta_{1})cos(\theta_{2})\boldsymbol{\widehat{j}}-a\,sinh(\chi)sin(\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+\boldsymbol{e}_{\chi}=\frac{\partial\boldsymbol{r}}{\partial\chi}=\left(\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\chi}(a\sinh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+=\left(a\,sinh(\chi)sin(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{i}}+a\,sinh(\chi)cos(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{j}}+a\,cosh(\chi)cos(\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+\\
+Agora basta verificar a ortogonalidade dois a dois entre estes vetores.
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{2}}=\left(a^{2}\,cosh^{2}(\chi)cos(\theta_{1})sin(\theta_{2})sin(\theta_{1})cos(\theta_{2})-a^{2}\,cosh^{2}(\chi)sin(\theta_{1})sin(\theta_{2})cos(\theta_{1})cos(\theta_{2})\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,cosh(\chi)cos(\theta_{1})sin^{2}(\theta_{2})sinh(\chi)sin(\theta_{1})-a^{2}\,cosh(\chi)sin(\theta_{1})sin^{2}(\theta_{2})sinh(\chi)cos(\theta_{1})\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,cosh(\chi)sin^{2}(\theta_{1})cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})+a^{2}\,cosh(\chi)cos^{2}(\theta_{1})cos(\theta_{2})sinh(\chi)sin(\theta_{2}) \right.
+\]
+
+\[ \left.-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})\right)\]
+
+\[
+=a^{2}\,cosh(\chi)cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})\left(sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right)-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})
+\]
+
+\[
+=a^{2}\,cosh(\chi)cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})=0
+\]
+
+Verificada a ortogonalidade entre os vetores da base, pode-se dizer
+que o sistema de coordenadas é ortogonal.
+
+\section*{Verificando Ortogonalidade do Hiperbolóide 3-dim (3-Hiperboloide?)
+de 2 Folhas}
+
+Verificar a ortogonalidade do seguinte sistema de coordenadas
+
+\begin{eqnarray*}
+x_{3} & = & a\cosh\chi\cos\theta_{2}\\
+x_{2} & = & a\sinh\chi\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\sinh\chi\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+Define-se
+
+\[
+\boldsymbol{r=}(a\sinh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+(a\sinh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+(a\cosh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}
+\]
+
+Tem-se
+
+\[
+\boldsymbol{e}_{\theta_{1}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{1}}=\left(\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+=\left(a\,sinh(\chi)cos(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{i}}-a\,sinh(\chi)sin(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{j}}+0\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{2}}=\left(\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+=\left(a\,sinh(\chi)sin(\theta_{1})cos(\theta_{2})\boldsymbol{\widehat{i}}+a\,sinh(\chi)cos(\theta_{1})cos(\theta_{2})\boldsymbol{\widehat{j}}-a\,cosh(\chi)sin(\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+\boldsymbol{e}_{\chi}=\frac{\partial\boldsymbol{r}}{\partial\chi}=\left(\frac{\partial}{\partial\chi}(a\sinh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\chi}(a\sinh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\chi}(a\cosh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\[
+=\left(a\,cosh(\chi)sin(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{i}}+a\,cosh(\chi)cos(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{j}}+a\,sinh(\chi)cos(\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+Agora basta verificar a ortogonalidade dois a dois entre estes vetores.
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{2}}=\left(a^{2}\,sinh^{2}(\chi)cos(\theta_{1})sin(\theta_{2})sin(\theta_{1})cos(\theta_{2})-a^{2}\,sinh^{2}(\chi)sin(\theta_{1})sin(\theta_{2})cos(\theta_{1})cos(\theta_{2})\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,cosh(\chi)cos(\theta_{1})sin^{2}(\theta_{2})sinh(\chi)sin(\theta_{1})-a^{2}\,cosh(\chi)sin(\theta_{1})sin^{2}(\theta_{2})sinh(\chi)cos(\theta_{1})\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,cosh(\chi)sin^{2}(\theta_{1})cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})+a^{2}\,cosh(\chi)cos^{2}(\theta_{1})cos(\theta_{2})sinh(\chi)sin(\theta_{2}) \right.
+\]
+
+\[ \left.-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})\right) \]
+
+\[
+=a^{2}\,cosh(\chi)cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})\left(sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right)-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})
+\]
+
+\[
+=a^{2}\,cosh(\chi)cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})=0
+\]
+\\
+\\
+Verificada a ortogonalidade entre os vetores da base, pode-se dizer
+que o sistema de coordenadas é ortogonal.
+
+\section*{Verificando Ortogonalidade do Hiperbolóide 4-dim (4-Hiperboloide?)
+de 1 Folha}
+
+Verificar a ortogonalidade do seguinte sistema de coordenadas
+
+\begin{eqnarray*}
+x_{4} & = & a\sinh\chi\cos\theta_{3}\\
+x_{3} & = & a\cosh\chi\sin\theta_{3}\cos\theta_{2}\\
+x_{1} & = & a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}\\
+x_{2} & = & a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{3},\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+Define-se
+
+\[
+\boldsymbol{r=}\left(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1},\,a\cosh\chi\sin\theta_{3}\cos\theta_{2},\,a\sinh\chi\cos\theta_{3}\right)
+\]
+
+Tem-se
+
+\[
+\boldsymbol{e}_{\theta_{1}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{1}}=\left(\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{3}\cos\theta_{2}) \right.
+\]
+\[ \left.,\,\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\cos\theta_{3})\right) \]
+\[
+=\left(-a\cosh\chi\sin\theta_{3}\sin\theta_{2}sin\theta_{1},a\cosh\chi\sin\theta_{3}\sin\theta_{2}cos\theta_{1},\,0,\,0\right)
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{2}}=\left(\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{3}\cos\theta_{2}),\, \right.
+\]
+\[ \left. \frac{\partial}{\partial\theta_{2}}(a\sinh\chi\cos\theta_{3})\right) \]
+\[
+=\left(a\cosh\chi\sin\theta_{3}cos\theta_{2}\cos\theta_{1},\,a\cosh\chi\sin\theta_{3}cos\theta_{2}\sin\theta_{1},\,-a\cosh\chi\sin\theta_{3}sin\theta_{2},0\right)
+\]
+
+\[
+\boldsymbol{e}_{\theta_{3}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{3}}=\left(\frac{\partial}{\partial\theta_{3}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{3}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{3}}(a\cosh\chi\sin\theta_{3}\cos\theta_{2}),\, \right.\]
+\[ \left.\frac{\partial}{\partial\theta_{3}}(a\sinh\chi\cos\theta_{3})\right)
+\ \]
+\[
+=\left(a\cosh\chi cos\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\cosh\chi cos\theta_{3}\sin\theta_{2}\sin\theta_{1},a\cosh\chi cos\theta_{3}\cos\theta_{2},\,-a\sinh\chi sin\theta_{3}\right)
+\]
+
+\[
+\boldsymbol{e}_{\chi}=\frac{\partial\boldsymbol{r}}{\partial\chi}=\left(\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{3}\cos\theta_{2}),\right.
+\]
+
+\[ \left.\,\frac{\partial}{\partial\chi}(a\sinh\chi\cos\theta_{3})\right) \]
+
+\[
+=\left(a\,sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\,sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1},\,a\,sinh\chi\sin\theta_{3}\cos\theta_{2},\,a\,cosh\chi\cos\theta_{3}\right)
+\]
+\\
+Agora basta verificar a ortogonalidade dois a dois entre estes vetores.
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{2}}=\left(-a^{2}\cosh^{2}\chi\sin^{2}\theta_{3}\sin\theta_{2}sin\theta_{1}\,cos\theta_{2}\cos\theta_{1}+a^{2}\cosh^{2}\chi\sin^{2}\theta_{3}\sin\theta_{2}cos\theta_{1}cos\theta_{2}\sin\theta_{1}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{3}}=\left(-a^{2}\cosh^{2}\chi\sin\theta_{3}\sin^{2}\theta_{2}sin\theta_{1}cos\theta_{3}\cos\theta_{1}+a^{2}\cosh^{2}\chi\sin\theta_{3}\sin^{2}\theta_{2}cos\theta_{1}cos\theta_{3}\sin\theta_{1}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\chi}=\left(-a^{2}\cosh\chi\sin^{2}\theta_{3}\sin^{2}\theta_{2}sin\theta_{1}sinh\chi\cos\theta_{1}+a^{2}\cosh\chi\sin^{2}\theta_{3}\sin^{2}\theta_{2}cos\theta_{1}\,sinh\chi\sin\theta_{1}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\theta_{3}}=\left(a^{2}\cosh^{2}\chi\sin\theta_{3}cos\theta_{2}\cos^{2}\theta_{1}cos\theta_{3}\sin\theta_{2}+a^{2}\cosh^{2}\chi\sin\theta_{3}cos\theta_{2}\sin^{2}\theta_{1}cos\theta_{3}\sin\theta_{2} \right.
+\]
+
+\[ \left.-a^{2}\cosh^{2}\chi\sin\theta_{3}sin\theta_{2}cos\theta_{3}\cos\theta_{2}\right) \]
+
+\[
+=\left(a^{2}\cosh^{2}\chi\sin\theta_{3}cos\theta_{2}cos\theta_{3}\sin\theta_{2}-a^{2}\cosh^{2}\chi\sin\theta_{3}sin\theta_{2}cos\theta_{3}\cos\theta_{2}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\cosh\chi\sin^{2}\theta_{3}cos\theta_{2}\cos^{2}\theta_{1}sinh\chi\sin\theta_{2}+\,a^{2}\cosh\chi\sin^{2}\theta_{3}cos\theta_{2}\sin^{2}\theta_{1}\,sinh\chi\sin\theta_{2} \right.
+\]
+
+\[ \left.-a^{2}\cosh\chi\sin^{2}\theta_{3}sin\theta_{2}\,sinh\chi\cos\theta_{2}\right) \]
+
+\[
+=\left(a^{2}\cosh\chi\sin^{2}\theta_{3}cos\theta_{2}sinh\chi\sin\theta_{2}-a^{2}\cosh\chi\sin^{2}\theta_{3}sin\theta_{2}\,sinh\chi\cos\theta_{2}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{3}}\cdot\boldsymbol{e}_{\chi}=(a^{2}\cosh\chi cos\theta_{3}\sin^{2}\theta_{2}\cos^{2}\theta_{1}sinh\chi\sin\theta_{3}+a^{2}\cosh\chi cos\theta_{3}\sin^{2}\theta_{2}\sin^{2}\theta_{1}\,sinh\chi\sin\theta_{3}+
+\]
+\[a^{2}\cosh\chi cos\theta_{3}\cos^{2}\theta_{2}\,sinh\chi\sin\theta_{3}-a^{2}\sinh\chi sin\theta_{3}\,cosh\chi\cos\theta_{3})\]
+
+
+\[
+=a^{2}\cosh\chi cos\theta_{3}\sin^{2}\theta_{2}sinh\chi\sin\theta_{3}+a^{2}\cosh\chi cos\theta_{3}\cos^{2}\theta_{2}\,sinh\chi\sin\theta_{3}-a^{2}\sinh\chi sin\theta_{3}\,cosh\chi\cos\theta_{3}
+\]
+
+\[
+=a^{2}\cosh\chi cos\theta_{3}sinh\chi\sin\theta_{3}-a^{2}\sinh\chi sin\theta_{3}\,cosh\chi\cos\theta_{3}=0
+\]
+\\
+Verificada a ortogonalidade entre os vetores da base, pode-se dizer
+que o sistema de coordenadas é ortogonal.
+
+\section*{Verificando Ortogonalidade do Hiperbolóide 4-dim (4-Hiperboloide?)
+de 2 Folhas}
+
+Verificar a ortogonalidade do seguinte sistema de coordenadas
+
+\begin{eqnarray*}
+x_{4} & = & a\cosh\chi\cos\theta_{3}\\
+x_{3} & = & a\sinh\chi\sin\theta_{3}\cos\theta_{2}\\
+x_{2} & = & a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{3},\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+Define-se
+
+\[
+\boldsymbol{r=}\left(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1},\,a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\sinh\chi\sin\theta_{3}\cos\theta_{2},\,a\cosh\chi\cos\theta_{3}\right)
+\]
+
+Tem-se
+
+\[
+\boldsymbol{e}_{\theta_{1}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{1}}=\left(\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{1}}(\,a\sinh\chi\sin\theta_{3}\cos\theta_{2}), \right.
+\]
+
+\[ \left.\,\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\cos\theta_{3})\right) \]
+
+\[
+=\left(a\,sinh\chi\sin\theta_{3}\sin\theta_{2}cos\theta_{1},-a\sinh\chi\sin\theta_{3}\sin\theta_{2}sin\theta_{1},\,0,\,0\right)
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{2}}=\left(\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{2}}(\,a\sinh\chi\sin\theta_{3}\cos\theta_{2}), \right.
+\]
+
+\[ \left.\,\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\cos\theta_{3})\right) \]
+
+\[
+=\left(a\sinh\chi\sin\theta_{3}cos\theta_{2}\sin\theta_{1},\,a\sinh\chi\sin\theta_{3}cos\theta_{2}\cos\theta_{1},\,-a\sinh\chi\sin\theta_{3}sin\theta_{2},0\right)
+\]
+
+\[
+\boldsymbol{e}_{\theta_{3}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{3}}=\left(\frac{\partial}{\partial\theta_{3}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{3}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{3}}(\,a\sinh\chi\sin\theta_{3}\cos\theta_{2}), \right.
+\]
+
+\[ \left.\,\frac{\partial}{\partial\theta_{3}}(a\cosh\chi\cos\theta_{3})\right) \]
+
+\[
+=\left(a\sinh\chi cos\theta_{3}\sin\theta_{2}\sin\theta_{1},\,a\sinh\chi cos\theta_{3}\sin\theta_{2}\cos\theta_{1},a\sinh\chi cos\theta_{3}\cos\theta_{2},\,-a\cosh\chi sin\theta_{3}\right)
+\]
+
+\[
+\boldsymbol{e}_{\chi}=\frac{\partial\boldsymbol{r}}{\partial\chi}=\left(\frac{\partial}{\partial\chi}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\chi}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\chi}(\,a\sinh\chi\sin\theta_{3}\cos\theta_{2}), \right.
+\]
+
+\[ \left.\,\frac{\partial}{\partial\chi}(a\cosh\chi\cos\theta_{3})\right) \]
+
+\[
+=\left(a\,cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1},a\,cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\,cosh\chi\sin\theta_{3}\cos\theta_{2},\,a\,sinh\chi\cos\theta_{3}\right)
+\]
+\\
+Agora basta verificar a ortogonalidade dois a dois entre estes vetores.
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{2}}=\left(a^{2}\,sinh^{2}\chi\sin^{2}\theta_{3}\sin\theta_{2}cos\theta_{1}cos\theta_{2}\sin\theta_{1}-a^{2}\sinh^{2}\chi\sin^{2}\theta_{3}\sin\theta_{2}sin\theta_{1}\,cos\theta_{2}\cos\theta_{1}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{3}}=\left(a^{2}\,sinh^{2}\chi\sin\theta_{3}\sin^{2}\theta_{2}cos\theta_{1}cos\theta_{3}\sin\theta_{1}-a^{2}\sinh^{2}\chi\sin\theta_{3}\sin^{2}\theta_{2}sin\theta_{1}cos\theta_{3}\cos\theta_{1}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,sinh\chi\sin^{2}\theta_{3}\sin^{2}\theta_{2}cos\theta_{1}cosh\chi\sin\theta_{1}-a^{2}\sinh\chi\sin^{2}\theta_{3}\sin^{2}\theta_{2}sin\theta_{1}cosh\chi\cos\theta_{1}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\theta_{3}}=\left(a^{2}\sinh^{2}\chi\sin\theta_{3}cos\theta_{2}\sin^{2}\theta_{1}cos\theta_{3}\sin\theta_{2}+a^{2}\sinh^{2}\chi\sin\theta_{3}cos\theta_{2}\cos^{2}\theta_{1}cos\theta_{3}\sin\theta_{2} \right.
+\]
+
+\[\left.-a^{2}\sinh^{2}\chi\sin\theta_{3}sin\theta_{2}cos\theta_{3}\cos\theta_{2}\right)\]
+
+\[
+=\left(a^{2}\sinh^{2}\chi\sin\theta_{3}cos\theta_{2}cos\theta_{3}\sin\theta_{2}-a^{2}\sinh^{2}\chi\sin\theta_{3}sin\theta_{2}cos\theta_{3}\cos\theta_{2}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\sinh\chi\sin^{2}\theta_{3}cos\theta_{2}\sin^{2}\theta_{1}cosh\chi\sin\theta_{2}+a^{2}\sinh\chi\sin^{2}\theta_{3}cos\theta_{2}\cos^{2}\theta_{1}cosh\chi\sin\theta_{2}\right.
+\]
+
+\[\left. -a^{2}\sinh\chi\sin^{2}\theta_{3}sin\theta_{2}cosh\chi\cos\theta_{2}\right)\]
+
+\[
+=\left(a^{2}\sinh\chi\sin^{2}\theta_{3}cos\theta_{2}cosh\chi\sin\theta_{2}-a^{2}\sinh\chi\sin^{2}\theta_{3}sin\theta_{2}cosh\chi\cos\theta_{2}\right)=0
+\]
+
+\[
+\boldsymbol{e}_{\theta_{3}}\cdot\boldsymbol{e}_{\chi}=(a^{2}\sinh\chi cos\theta_{3}\sin^{2}\theta_{2}\sin^{2}\theta_{1}cosh\chi\sin\theta_{3}+a^{2}\sinh\chi cos\theta_{3}\sin^{2}\theta_{2}\cos^{2}\theta_{1}cosh\chi\sin\theta_{3}
+\]
+
+\[
++a^{2}\sinh\chi cos\theta_{3}\cos^{2}\theta_{2}cosh\chi\sin\theta_{3}-a^{2}\cosh\chi sin\theta_{3}sinh\chi\cos\theta_{3})
+\]
+
+\[
+=a^{2}\sinh\chi cos\theta_{3}\sin^{2}\theta_{2}cosh\chi\sin\theta_{3}+a^{2}\sinh\chi cos\theta_{3}\cos^{2}\theta_{2}cosh\chi\sin\theta_{3}-a^{2}\cosh\chi sin\theta_{3}sinh\chi\cos\theta_{3}
+\]
+
+\[
+=a^{2}\sinh\chi cos\theta_{3}cosh\chi\sin\theta_{3}-a^{2}\cosh\chi sin\theta_{3}sinh\chi\cos\theta_{3}=0
+\]
+\\
+Verificada a ortogonalidade entre os vetores da base, pode-se dizer
+que o sistema de coordenadas é ortogonal.
+
+\section{Conclusão}
+
+Mostrou-se a ortogonalidade das 4 parametrizações estudadas. Dada
+essa característica dos sistemas de coordenadas vale, de acordo com
+Riley(2006), a seguinte propriedade:
+
+\[
+g_{ij}=\begin{cases}
+h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\end{document}

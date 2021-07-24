@@ -1,0 +1,532 @@
+%% LyX 2.3.6.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{babel}
+\begin{document}
+
+\section{Laplaciano hiperboloide de 2 folhas (3-dim)}
+
+Dada a seguinte parametrização:
+
+\begin{eqnarray*}
+x_{3} & = & a\cosh\chi\cos\theta_{2}\\
+x_{2} & = & a\sinh\chi\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\sinh\chi\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+com
+
+\[
+q_{1}=\theta_{1},\ q_{2}=\theta_{2},\ q_{3}=\chi
+\]
+
+Utiliza-se o Operador de Laplace-Beltrami para encontrar o Laplaciano:
+
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\frac{\partial}{\partial q_{i}}\left(\sqrt{\left\vert g\right\vert }g^{ij}\frac{\partial u}{\partial q_{j}}\right)
+\]
+
+De acordo com Arfken(2017), pode-se determinar o tensor métrico $g_{ij}$
+
+\[
+G=(g_{ij})=\underset{k}{\sum}\frac{\partial x_{k}}{\partial q_{_{^{i}}}}\frac{\partial x_{^{_{k}}}}{\partial q_{_{^{j}}}}
+\]
+
+Na dada parametrização, forma-se um \textbf{sistema de coordenadas
+ortogonal} de modo que, segundo Riley(2006), os elementos do tensor
+métrico podem ser dados por:
+\[
+g_{ij}=\begin{cases}
+h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+Onde $h_{i}^{2}=\sum_{j}\left[\left(\frac{\partial x_{j}}{\partial q_{i}}\right)^{2}\right]$.
+Ou seja, $h_{i}$ é associado a $q_{i}$. Como nesse caso $q_{1}=\theta_{1},\,q_{2}=\theta_{2},\,q_{3}=\chi$
+então tem-se $h_{1}=h_{\theta_{1}}$, $h_{2}=h_{\theta_{2}}$ e $h_{3}=\chi$.
+
+Ou seja, a matriz $G=(g_{ij})$ é diagonal com os elementos $h_{1}^{2}$,
+$h_{2}^{2}$ e $h_{3}^{2}$. Em outras palavras $G=diag(h_{1}^{2},\,h_{2}^{2},\,h_{3}^{2})$.
+
+\[
+G=(g_{ij})=\left(\begin{array}{ccc}
+h_{1}^{2} & 0 & 0\\
+0 & h_{2}^{2} & 0\\
+0 & 0 & h_{3}^{2}
+\end{array}\right)
+\]
+
+Ainda de acordo com Riley(2006), o tensor métrico inverso, para um
+sistema ortogonal de coordenadas, pode ser dado por:
+
+\[
+G^{-1}=(g^{ij})=\begin{cases}
+1/h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\[
+G^{-1}=(g^{ij})=\left(\begin{array}{ccc}
+\frac{1}{h_{1}^{2}} & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}}
+\end{array}\right)
+\]
+
+E, por fim, $g=det(g_{ij})=h_{1}^{2}h_{2}^{2}h_{3}^{2}$ . Consequentemente,
+$\sqrt{|g|}=h_{1}h_{2}h_{3}$.
+
+Os coeficientes métricos são encontrados da seguinte forma:
+
+\[
+h_{1}^{2}=h_{\theta_{1}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{1}}\right)^{2}
+\]
+
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{2}}\right)^{2}
+\]
+
+\[
+h_{3}^{2}=h_{\chi}^{2}=\left(\frac{\partial x_{1}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\chi}\right)^{2}
+\]
+
+Calcula-se tais coeficientes:
+\begin{align*}
+h_{1}^{2} & =h_{\theta_{1}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{1}}\right)^{2}=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})+a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})
+\end{align*}
+
+\[
+=a{{}^2}sinh^{2}(\chi)sin^{2}(\theta_{2})\left[cos^{2}(\theta_{1})+sin^{2}(\theta_{1})\right]
+\]
+
+\[
+\boldsymbol{h_{1}^{2}=h_{\theta_{1}}^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})}
+\]
+
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{2}}\right)^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})cos^{2}(\theta_{2})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})cos^{2}(\theta_{2})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})
+\]
+
+\[
+\boldsymbol{h_{2}^{2}=h_{\theta_{2}}^{2}=a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}
+\]
+
+\[
+h_{3}^{2}=h_{\chi}^{2}=\left(\frac{\partial x_{1}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\chi}\right)^{2}=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})+a^{2}cosh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})
+\]
+
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})
+\]
+
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})
+\]
+
+\[
+\boldsymbol{h_{3}^{2}=h_{\chi}^{2}=a^{2}\left[cosh^{2}(\chi)sin^{2}(\theta_{2})+sinh^{2}(\chi)cos^{2}(\theta_{2})\right]}
+\]
+
+Observa-se que $h_{2}^{2}=h_{\theta_{2}}^{2}=h_{3}^{2}=h_{\chi}^{2}$
+então $\sqrt{|g|}=h_{1}h_{2}^{2}$. Agora é possível construir a matriz
+$\sqrt{|g|}g^{ij}$:
+
+\[
+\sqrt{|g|}g^{ij}=h_{1}h_{2}^{2}\left(\begin{array}{ccc}
+\frac{1}{h_{1}^{2}} & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}}
+\end{array}\right)=\left(\begin{array}{ccc}
+\frac{h_{2}^{2}}{h_{1}} & 0 & 0\\
+0 & h_{1} & 0\\
+0 & 0 & h_{1}
+\end{array}\right)
+\]
+
+Aplica-se os resultados no Operador de Laplace-Beltrami e chega-se
+em:
+
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\left[\frac{\partial}{\partial q_{1}}\left(\sqrt{\left\vert g\right\vert }g^{11}\frac{\partial u}{\partial q_{1}}\right)+\frac{\partial}{\partial q_{2}}\left(\sqrt{\left\vert g\right\vert }g^{22}\frac{\partial u}{\partial q_{2}}\right)+\frac{\partial}{\partial q_{3}}\left(\sqrt{\left\vert g\right\vert }g^{33}\frac{\partial u}{\partial q_{3}}\right)\right]
+\]
+
+\begin{align*}
+\Delta u & =\frac{1}{h_{1}h_{2}^{2}}\left[\frac{\partial}{\partial\theta_{1}}\left(\frac{h_{2}^{2}}{h_{1}}\frac{\partial u}{\partial\theta_{1}}\right)+\frac{\partial}{\partial\theta_{2}}\left(h_{1}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(h_{1}\frac{\partial u}{\partial\chi}\right)\right]
+\end{align*}
+
+\[
+\Delta u=\frac{1}{h_{1}h_{2}^{2}}\left[\frac{\partial}{\partial\theta_{1}}\left(\frac{a\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}{sinh(\chi)sin(\theta_{2})}\frac{\partial u}{\partial\theta_{1}}\right)+\frac{\partial}{\partial\theta_{2}}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+\[
+\Delta u=\frac{1}{h_{1}h_{2}^{2}}\left[\frac{a\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}{sinh(\chi)sin(\theta_{2})}\frac{\partial{{}^2}u}{\partial\theta{{}^2}_{1}}+\frac{\partial}{\partial\theta_{2}}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+Sabendo que $\frac{1}{h_{1}h_{2}^{2}}=\frac{1}{a^{3}sinh(\chi)sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}$,
+o Laplaciano fica:
+
+\[
+\Delta u=\frac{1}{h_{1}h_{2}^{2}}\left[\frac{\partial}{\partial\theta_{2}}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]+\frac{1}{a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})}\frac{\partial{{}^2}u}{\partial\theta{{}^2}_{1}}
+\]
+
+\[
+\boldsymbol{\Delta u=\frac{1}{a^{3}sinh(\chi)sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}\left[\frac{\partial}{\partial\theta_{2}}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]}
+\]
+
+\textbf{
+\[
+\boldsymbol{+\frac{1}{a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})}\frac{\partial{{}^2}u}{\partial\theta_{1}^{2}}}
+\]
+}
+
+\textbf{OBS: Não consegui simplificar $a^{3}sinh(\chi)sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]$.}
+
+\section{Laplaciano hiperboloide de 2 folhas (4-dim)}
+
+Dada a seguinte parametrização:
+
+\begin{eqnarray*}
+x_{4} & = & a\cosh\chi\cos\theta_{3}\\
+x_{3} & = & a\sinh\chi\sin\theta_{3}\cos\theta_{2}\\
+x_{2} & = & a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{3},\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+com
+
+\[
+q_{1}=\theta_{1},\ q_{2}=\theta_{2},\ q_{3}=\theta_{3},\,q_{4}=\chi
+\]
+
+Utiliza-se o Operador de Laplace-Beltrami para encontrar o Laplaciano:
+
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\frac{\partial}{\partial q_{i}}\left(\sqrt{\left\vert g\right\vert }g^{ij}\frac{\partial u}{\partial q_{j}}\right)
+\]
+
+De acordo com Arfken(2017), pode-se determinar o tensor métrico $g_{ij}$
+
+\[
+G=(g_{ij})=\underset{k}{\sum}\frac{\partial x_{k}}{\partial q_{_{^{i}}}}\frac{\partial x_{^{_{k}}}}{\partial q_{_{^{j}}}}
+\]
+
+Na dada parametrização, forma-se um \textbf{sistema de coordenadas
+ortogonal} de modo que, segundo Riley(2006), os elementos do tensor
+métrico podem ser dados por:
+\[
+g_{ij}=\begin{cases}
+h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+Onde $h_{i}^{2}=\sum_{j}\left[\left(\frac{\partial x_{j}}{\partial q_{i}}\right)^{2}\right]$.
+Ou seja, $h_{i}$ é associado a $q_{i}$. Como nesse caso $q_{1}=\theta_{1},\thinspace q_{2}=\theta_{2},\thinspace q_{3}=\theta_{3},\,q_{4}=\chi$
+então tem-se $h_{1}=h_{\theta_{!}}$, $h_{2}=h_{\theta_{2}}$, $h_{3}=h_{\theta_{3}}$
+e $h_{4}=\chi$.
+
+Ou seja, a matriz $G=(g_{ij})$ é diagonal com os elementos $h_{1}^{2}$,
+$h_{2}^{2}$ , $h_{3}^{2}$ e $h_{4}^{2}$. Em outras palavras $G=diag(h_{1}^{2},\,h_{2}^{2},\,h_{3}^{2},\,h_{4}^{2})$.
+
+\[
+G=(g_{ij})=\left(\begin{array}{cccc}
+h_{1}^{2} & 0 & 0 & 0\\
+0 & h_{2}^{2} & 0 & 0\\
+0 & 0 & h_{3}^{2} & 0\\
+0 & 0 & 0 & h_{4}^{2}
+\end{array}\right)
+\]
+
+Ainda de acordo com Riley(2006), o tensor métrico inverso, para um
+sistema ortogonal de coordenadas, pode ser dado por:
+
+\[
+G^{-1}=(g^{ij})=\begin{cases}
+1/h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\[
+G^{-1}=(g^{ij})=\left(\begin{array}{cccc}
+\frac{1}{h_{1}^{2}} & 0 & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0 & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}} & 0\\
+0 & 0 & 0 & \frac{1}{h_{4}^{2}}
+\end{array}\right)
+\]
+
+E, por fim, $g=det(g_{ij})=h_{1}^{2}h_{2}^{2}h_{3}^{2}h_{4}^{2}$.
+Consequentemente, $\sqrt{|g|}=h_{1}h_{2}h_{3}h_{4}$.
+
+Os coeficientes métricos são encontrados da seguinte forma:
+
+\[
+h_{1}^{2}=h_{\theta_{1}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\theta_{1}}\right)^{2}
+\]
+
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\theta_{2}}\right)^{2}
+\]
+
+\[
+h_{3}^{2}=h_{\theta_{3}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\theta_{3}}\right)^{2}
+\]
+
+\[
+h_{4}^{2}=h_{\chi}^{2}=\left(\frac{\partial x_{1}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\chi}\right)^{2}
+\]
+
+Calcula-se tais coeficientes:
+
+\[
+h_{1}^{2}=h_{\theta_{1}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{1}}\right)^{2}=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})\left[cos^{2}(\theta_{1})+sin^{2}(\theta_{1})\right]
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\[
+\boldsymbol{h_{1}^{2}=h_{\theta_{1}}^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})}
+\]
+
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{2}}\right)^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})cos^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\[
++a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})\left[cos^{2}(\theta_{2})+sin^{2}(\theta_{2})\right]
+\]
+
+\[
+\boldsymbol{h_{2}^{2}=h_{\theta_{2}}^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})}
+\]
+
+\[
+h_{3}^{2}=h_{\theta_{3}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\theta_{3}}\right)^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})cos^{2}(\theta_{3})
+\]
+
+\[
++a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})cos^{2}(\theta_{3})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})\left[sin^{2}(\theta_{2})+cos^{2}(\theta_{2})\right]+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\[
+\boldsymbol{h_{3}^{2}=h_{\theta_{3}}^{2}=a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}
+\]
+
+\[
+h_{4}^{2}=h_{\chi}^{2}=\left(\frac{\partial x_{1}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\chi}\right)^{2}=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\[
++a^{2}cosh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}cosh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})\left[sin^{2}(\theta_{2})+cos^{2}(\theta_{2})\right]+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\begin{equation}
+\boldsymbol{h_{4}^{2}=h_{\chi}^{2}=a^{2}\left[cosh^{2}(\chi)sin^{2}(\theta_{3})+sinh^{2}(\chi)cos^{2}(\theta_{3})\right]}
+\end{equation}
+
+Observa-se que $h_{3}^{2}=h_{\theta_{3}}^{2}=h_{4}^{2}=h_{\chi}^{2}$
+então $\sqrt{|g|}=h_{1}h_{2}h_{3}^{2}$. Agora é possível construir
+a matriz $\sqrt{|g|}g^{ij}$:
+
+\[
+\sqrt{|g|}g^{ij}=h_{1}h_{2}h_{3}^{2}\left(\begin{array}{cccc}
+\frac{1}{h_{1}^{2}} & 0 & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0 & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}} & 0\\
+0 & 0 & 0 & \frac{1}{h_{4}^{2}}
+\end{array}\right)=\left(\begin{array}{cccc}
+\frac{h_{2}h_{3}^{2}}{h_{1}} & 0 & 0 & 0\\
+0 & \frac{h_{1}h_{3}^{2}}{h_{2}} & 0 & 0\\
+0 & 0 & h_{1}h_{2} & 0\\
+0 & 0 & 0 & h_{1}h_{2}
+\end{array}\right)
+\]
+
+Aplica-se os resultados no Operador de Laplace-Beltrami e chega-se
+em:
+
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\left[\frac{\partial}{\partial q_{1}}\left(\sqrt{\left\vert g\right\vert }g^{11}\frac{\partial u}{\partial q_{1}}\right)+\frac{\partial}{\partial q_{2}}\left(\sqrt{\left\vert g\right\vert }g^{22}\frac{\partial u}{\partial q_{2}}\right)+\frac{\partial}{\partial q_{3}}\left(\sqrt{\left\vert g\right\vert }g^{33}\frac{\partial u}{\partial q_{3}}\right)++\frac{\partial}{\partial q_{4}}\left(\sqrt{\left\vert g\right\vert }g^{44}\frac{\partial u}{\partial q_{4}}\right)\right]
+\]
+
+\begin{align*}
+\Delta u & =\frac{1}{h_{1}h_{2}h_{3}^{2}}\left[\frac{\partial}{\partial\theta_{1}}\left(\frac{h_{2}h_{3}^{2}}{h_{1}}\frac{\partial u}{\partial\theta_{1}}\right)+\frac{\partial}{\partial\theta_{2}}\left(\frac{h_{1}h_{3}^{2}}{h_{2}}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\theta_{3}}\left(h_{1}h_{2}\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(h_{1}h_{2}\frac{\partial u}{\partial\chi}\right)\right]
+\end{align*}
+
+Dado que
+
+\[
+\frac{1}{h_{1}h_{2}h_{3}^{2}}=\frac{1}{a^{4}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}
+\]
+
+\[
+\frac{h_{2}h_{3}^{2}}{h_{1}}=\frac{a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}{sin(\theta_{2})}
+\]
+
+\[
+\frac{h_{1}h_{3}^{2}}{h_{2}}=sin(\theta_{2})a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]
+\]
+
+\[
+h_{1}h_{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})
+\]
+
+Vê-se que $\frac{h_{2}h_{3}^{2}}{h_{1}}$ não depende de $\theta_{1}$,
+logo:
+
+\[
+\frac{\partial}{\partial\theta_{1}}\left(\frac{h_{2}h_{3}^{2}}{h_{1}}\frac{\partial u}{\partial\theta_{1}}\right)=\frac{h_{2}h_{3}^{2}}{h_{1}}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}=\frac{a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}{sin(\theta_{2})}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+O Laplaciano fica então:
+
+\[
+\Delta u=\frac{1}{h_{1}h_{2}h_{3}^{2}}\left[\frac{h_{2}h_{3}^{2}}{h_{1}}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}+\frac{\partial}{\partial\theta_{2}}\left(\frac{h_{1}h_{3}^{2}}{h_{2}}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\theta_{3}}\left(h_{1}h_{2}\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(h_{1}h_{2}\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+\[
+\Delta u=\frac{1}{h_{1}h_{2}h_{3}^{2}}\left[\frac{\partial}{\partial\theta_{2}}\left(\frac{h_{1}h_{3}^{2}}{h_{2}}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\theta_{3}}\left(h_{1}h_{2}\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(h_{1}h_{2}\frac{\partial u}{\partial\chi}\right)\right]+\frac{1}{h_{1}^{2}}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+Para finalmente encontrar a expressão do Laplaciano, aplica-se as
+expressões para dos coeficientes métricos:
+
+\[
+\boldsymbol{\Delta u=\frac{1}{a^{4}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}[\frac{\partial}{\partial\theta_{2}}\left(sin(\theta_{2})a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]\frac{\partial u}{\partial\theta_{2}}\right)}
+\]
+
+\[
+\boldsymbol{+\frac{\partial}{\partial\theta_{3}}\left(a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)]}
+\]
+
+\[
+\boldsymbol{+\frac{1}{a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}}
+\]
+
+\textbf{OBS1: Não consegui simplificar $a^{4}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]$.}
+
+\textbf{OBS2: Utilizando outro Software de Matemática Simbólica (Python
+utilizando o pacote SymPy ) eu encontro a expressão (1) simplificada
+na forma $h_{3}^{2}=h_{\theta_{3}}^{2}=h_{4}^{2}=h_{\chi}^{2}=a^{2}\left[sin^{2}(\theta_{3})+sinh^{2}(\chi)\right]$.
+Porém, fazendo à mão, eu não consegui entender como ele chegou nisso
+e, portanto, não usei essa simplificação. Vale a pena ressaltar que
+essa expressão simplificaria um pouco mais o Laplaciano. Além disso,
+no resultado que encontrei anteriormente (}Laplaciano hiperboloide
+de 1 folha (4-dim)\textbf{) usei a simplificação encontrada no outro
+Software de Matemática Simbólica (mas não verifiquei o resultado à
+mão. Falha minha).}
+
+\section{Comparando Resultados}
+
+Ao comparar o \textbf{Laplaciano Hiperboloide de 1 Folha} (3-dim):
+
+\[
+\Delta u=\frac{1}{a^{3}cosh(\chi)\,sin(\theta_{2})\left[sinh^{2}(\chi)sin^{2}(\theta_{2})+cosh^{2}(\chi)cos^{2}(\theta_{2})\right]}\left[\frac{\partial}{\partial\theta_{2}}\left(a\,cosh(\chi)\,sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(a\,cosh(\chi)\,sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+\[
++\frac{1}{a^{2}\,cosh^{2}(\chi)\,sin^{2}(\theta_{2})}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+Com o \textbf{Laplaciano Hiperboloide de 2 Folhas} (3-dim):
+
+\[
+\boldsymbol{\Delta u=\frac{1}{a^{3}sinh(\chi)sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}\left[\frac{\partial}{\partial\theta_{2}}\left(a\,sinh(\chi)\,sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(a\,sinh(\chi)\,sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]}
+\]
+
+\[
+\boldsymbol{+\frac{1}{a^{2}\,sinh^{2}(\chi)\,sin^{2}(\theta_{2})}\frac{\partial{{}^2}u}{\partial\theta_{1}^{2}}}
+\]
+
+Percebe-se que a principal diferença são algumas trocas de $sin(\theta_{2})$
+por $cos(\theta_{2})$ e, principalmente, de $cosh(\chi)$ por $sinh(\chi)$.
+
+Quando compara-se o \textbf{Laplaciano Hiperboloide de 1 Folha} (4-dim) 
+
+\[ \Delta u=\frac{1}{a^{4}sin(\theta_{2})sin^{2}(\theta_{3})cosh^{2}(\chi)[\cosh^{2}\left(\chi\right)-\sin^{2}\left(\theta_{3}\right)]}\left[\frac{\partial}{\partial\theta_{2}}\left(-a^{2}sin(\theta_{2})[\sin^{2}\left(\theta_{3}\right)-\cosh^{2}\left(\chi\right)]\frac{\partial u}{\partial\theta_{2}}\right) \right. \]
+\[ +\frac{\partial}{\partial\theta_{3}}\left(a^{2}\sin\left(\theta_{2}\right)\sin^{2}\left(\theta_{3}\right)\cosh^{2}\left(\chi\right)\frac{\partial u}{\partial\theta_{3}}\right) \]
+\[ \left. +\frac{\partial}{\partial\chi}\left(a^{2}\sin\left(\theta_{2}\right)\sin^{2}\left(\theta_{3}\right)\cosh^{2}\left(\chi\right)\frac{\partial u}{\partial\chi}\right) \right] \]
+\[ -\left(\frac{1}{a^{2}sin^{2}(\theta_{2})sin^{3}(\theta_{3})cosh^{2}(\chi)}\right)\frac{\partial^{2}u}{\partial\theta_{1}^{2}} \]
+
+Com o \textbf{Laplaciano Hiperboloide de 2 Folha} (4-dim).
+\[
+\Delta u=\frac{1}{a^{4}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}[\frac{\partial}{\partial\theta_{2}}\left(sin(\theta_{2})a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]\frac{\partial u}{\partial\theta_{2}}\right)
+\]
+
+\[
++\frac{\partial}{\partial\theta_{3}}\left(a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)]
+\]
+
+\[
++\frac{1}{a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+Percebe-se que a principal diferença são algumas trocas de $cosh(\chi)$
+por $sinh(\chi)$.
+\end{document}

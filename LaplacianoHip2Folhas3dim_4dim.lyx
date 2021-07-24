@@ -1,0 +1,1726 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Laplaciano hiperboloide de 2 folhas (3-dim)
+\end_layout
+
+\begin_layout Standard
+Dada a seguinte parametrização:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{3} & = & a\cosh\chi\cos\theta_{2}\\
+x_{2} & = & a\sinh\chi\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\sinh\chi\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+com
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q_{1}=\theta_{1},\ q_{2}=\theta_{2},\ q_{3}=\chi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utiliza-se o Operador de Laplace-Beltrami para encontrar o Laplaciano:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\frac{\partial}{\partial q_{i}}\left(\sqrt{\left\vert g\right\vert }g^{ij}\frac{\partial u}{\partial q_{j}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De acordo com Arfken(2017), pode-se determinar o tensor métrico 
+\begin_inset Formula $g_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G=(g_{ij})=\underset{k}{\sum}\frac{\partial x_{k}}{\partial q_{_{^{i}}}}\frac{\partial x_{^{_{k}}}}{\partial q_{_{^{j}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na dada parametrização, forma-se um 
+\series bold
+sistema de coordenadas ortogonal
+\series default
+ de modo que, segundo Riley(2006), os elementos do tensor métrico podem
+ ser dados por:
+\begin_inset Formula 
+\[
+g_{ij}=\begin{cases}
+h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde 
+\begin_inset Formula $h_{i}^{2}=\sum_{j}\left[\left(\frac{\partial x_{j}}{\partial q_{i}}\right)^{2}\right]$
+\end_inset
+
+.
+ Ou seja, 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ é associado a 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+.
+ Como nesse caso 
+\begin_inset Formula $q_{1}=\theta_{1},\,q_{2}=\theta_{2},\,q_{3}=\chi$
+\end_inset
+
+ então tem-se 
+\begin_inset Formula $h_{1}=h_{\theta_{1}}$
+\end_inset
+
+, 
+\begin_inset Formula $h_{2}=h_{\theta_{2}}$
+\end_inset
+
+ e 
+\begin_inset Formula $h_{3}=\chi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ou seja, a matriz 
+\begin_inset Formula $G=(g_{ij})$
+\end_inset
+
+ é diagonal com os elementos 
+\begin_inset Formula $h_{1}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $h_{2}^{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $h_{3}^{2}$
+\end_inset
+
+.
+ Em outras palavras 
+\begin_inset Formula $G=diag(h_{1}^{2},\,h_{2}^{2},\,h_{3}^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G=(g_{ij})=\left(\begin{array}{ccc}
+h_{1}^{2} & 0 & 0\\
+0 & h_{2}^{2} & 0\\
+0 & 0 & h_{3}^{2}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ainda de acordo com Riley(2006), o tensor métrico inverso, para um sistema
+ ortogonal de coordenadas, pode ser dado por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G^{-1}=(g^{ij})=\begin{cases}
+1/h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G^{-1}=(g^{ij})=\left(\begin{array}{ccc}
+\frac{1}{h_{1}^{2}} & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E, por fim, 
+\begin_inset Formula $g=det(g_{ij})=h_{1}^{2}h_{2}^{2}h_{3}^{2}$
+\end_inset
+
+ .
+ Consequentemente, 
+\begin_inset Formula $\sqrt{|g|}=h_{1}h_{2}h_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Os coeficientes métricos são encontrados da seguinte forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{1}^{2}=h_{\theta_{1}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{1}}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{2}}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{3}^{2}=h_{\chi}^{2}=\left(\frac{\partial x_{1}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\chi}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calcula-se tais coeficientes:
+\begin_inset Formula 
+\begin{align*}
+h_{1}^{2} & =h_{\theta_{1}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{1}}\right)^{2}=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})+a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a²sinh^{2}(\chi)sin^{2}(\theta_{2})\left[cos^{2}(\theta_{1})+sin^{2}(\theta_{1})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{h_{1}^{2}=h_{\theta_{1}}^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{2}}\right)^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})cos^{2}(\theta_{2})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})cos^{2}(\theta_{2})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{h_{2}^{2}=h_{\theta_{2}}^{2}=a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{3}^{2}=h_{\chi}^{2}=\left(\frac{\partial x_{1}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\chi}\right)^{2}=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})+a^{2}cosh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{h_{3}^{2}=h_{\chi}^{2}=a^{2}\left[cosh^{2}(\chi)sin^{2}(\theta_{2})+sinh^{2}(\chi)cos^{2}(\theta_{2})\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observa-se que 
+\begin_inset Formula $h_{2}^{2}=h_{\theta_{2}}^{2}=h_{3}^{2}=h_{\chi}^{2}$
+\end_inset
+
+ então 
+\begin_inset Formula $\sqrt{|g|}=h_{1}h_{2}^{2}$
+\end_inset
+
+.
+ Agora é possível construir a matriz 
+\begin_inset Formula $\sqrt{|g|}g^{ij}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt{|g|}g^{ij}=h_{1}h_{2}^{2}\left(\begin{array}{ccc}
+\frac{1}{h_{1}^{2}} & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}}
+\end{array}\right)=\left(\begin{array}{ccc}
+\frac{h_{2}^{2}}{h_{1}} & 0 & 0\\
+0 & h_{1} & 0\\
+0 & 0 & h_{1}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplica-se os resultados no Operador de Laplace-Beltrami e chega-se em:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\left[\frac{\partial}{\partial q_{1}}\left(\sqrt{\left\vert g\right\vert }g^{11}\frac{\partial u}{\partial q_{1}}\right)+\frac{\partial}{\partial q_{2}}\left(\sqrt{\left\vert g\right\vert }g^{22}\frac{\partial u}{\partial q_{2}}\right)+\frac{\partial}{\partial q_{3}}\left(\sqrt{\left\vert g\right\vert }g^{33}\frac{\partial u}{\partial q_{3}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\Delta u & =\frac{1}{h_{1}h_{2}^{2}}\left[\frac{\partial}{\partial\theta_{1}}\left(\frac{h_{2}^{2}}{h_{1}}\frac{\partial u}{\partial\theta_{1}}\right)+\frac{\partial}{\partial\theta_{2}}\left(h_{1}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(h_{1}\frac{\partial u}{\partial\chi}\right)\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{h_{1}h_{2}^{2}}\left[\frac{\partial}{\partial\theta_{1}}\left(\frac{a\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}{sinh(\chi)sin(\theta_{2})}\frac{\partial u}{\partial\theta_{1}}\right)+\frac{\partial}{\partial\theta_{2}}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{h_{1}h_{2}^{2}}\left[\frac{a\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}{sinh(\chi)sin(\theta_{2})}\frac{\partial²u}{\partial\theta²_{1}}+\frac{\partial}{\partial\theta_{2}}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sabendo que 
+\begin_inset Formula $\frac{1}{h_{1}h_{2}^{2}}=\frac{1}{a^{3}sinh(\chi)sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}$
+\end_inset
+
+, o Laplaciano fica:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{h_{1}h_{2}^{2}}\left[\frac{\partial}{\partial\theta_{2}}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]+\frac{1}{a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})}\frac{\partial²u}{\partial\theta²_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{\Delta u=\frac{1}{a^{3}sinh(\chi)sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}\left[\frac{\partial}{\partial\theta_{2}}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(asinh(\chi)sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula 
+\[
+\boldsymbol{+\frac{1}{a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})}\frac{\partial²u}{\partial\theta_{1}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+OBS: Não consegui simplificar 
+\begin_inset Formula $a^{3}sinh(\chi)sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Laplaciano hiperboloide de 2 folhas (4-dim)
+\end_layout
+
+\begin_layout Standard
+Dada a seguinte parametrização:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{4} & = & a\cosh\chi\cos\theta_{3}\\
+x_{3} & = & a\sinh\chi\sin\theta_{3}\cos\theta_{2}\\
+x_{2} & = & a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{3},\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+com
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q_{1}=\theta_{1},\ q_{2}=\theta_{2},\ q_{3}=\theta_{3},\,q_{4}=\chi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utiliza-se o Operador de Laplace-Beltrami para encontrar o Laplaciano:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\frac{\partial}{\partial q_{i}}\left(\sqrt{\left\vert g\right\vert }g^{ij}\frac{\partial u}{\partial q_{j}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De acordo com Arfken(2017), pode-se determinar o tensor métrico 
+\begin_inset Formula $g_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G=(g_{ij})=\underset{k}{\sum}\frac{\partial x_{k}}{\partial q_{_{^{i}}}}\frac{\partial x_{^{_{k}}}}{\partial q_{_{^{j}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na dada parametrização, forma-se um 
+\series bold
+sistema de coordenadas ortogonal
+\series default
+ de modo que, segundo Riley(2006), os elementos do tensor métrico podem
+ ser dados por:
+\begin_inset Formula 
+\[
+g_{ij}=\begin{cases}
+h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde 
+\begin_inset Formula $h_{i}^{2}=\sum_{j}\left[\left(\frac{\partial x_{j}}{\partial q_{i}}\right)^{2}\right]$
+\end_inset
+
+.
+ Ou seja, 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ é associado a 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+.
+ Como nesse caso 
+\begin_inset Formula $q_{1}=\theta_{1},\thinspace q_{2}=\theta_{2},\thinspace q_{3}=\theta_{3},\,q_{4}=\chi$
+\end_inset
+
+ então tem-se 
+\begin_inset Formula $h_{1}=h_{\theta_{!}}$
+\end_inset
+
+, 
+\begin_inset Formula $h_{2}=h_{\theta_{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $h_{3}=h_{\theta_{3}}$
+\end_inset
+
+ e 
+\begin_inset Formula $h_{4}=\chi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ou seja, a matriz 
+\begin_inset Formula $G=(g_{ij})$
+\end_inset
+
+ é diagonal com os elementos 
+\begin_inset Formula $h_{1}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $h_{2}^{2}$
+\end_inset
+
+ , 
+\begin_inset Formula $h_{3}^{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $h_{4}^{2}$
+\end_inset
+
+.
+ Em outras palavras 
+\begin_inset Formula $G=diag(h_{1}^{2},\,h_{2}^{2},\,h_{3}^{2},\,h_{4}^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G=(g_{ij})=\left(\begin{array}{cccc}
+h_{1}^{2} & 0 & 0 & 0\\
+0 & h_{2}^{2} & 0 & 0\\
+0 & 0 & h_{3}^{2} & 0\\
+0 & 0 & 0 & h_{4}^{2}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ainda de acordo com Riley(2006), o tensor métrico inverso, para um sistema
+ ortogonal de coordenadas, pode ser dado por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G^{-1}=(g^{ij})=\begin{cases}
+1/h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G^{-1}=(g^{ij})=\left(\begin{array}{cccc}
+\frac{1}{h_{1}^{2}} & 0 & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0 & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}} & 0\\
+0 & 0 & 0 & \frac{1}{h_{4}^{2}}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E, por fim, 
+\begin_inset Formula $g=det(g_{ij})=h_{1}^{2}h_{2}^{2}h_{3}^{2}h_{4}^{2}$
+\end_inset
+
+.
+ Consequentemente, 
+\begin_inset Formula $\sqrt{|g|}=h_{1}h_{2}h_{3}h_{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Os coeficientes métricos são encontrados da seguinte forma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{1}^{2}=h_{\theta_{1}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\theta_{1}}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\theta_{2}}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{3}^{2}=h_{\theta_{3}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\theta_{3}}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{4}^{2}=h_{\chi}^{2}=\left(\frac{\partial x_{1}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\chi}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calcula-se tais coeficientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{1}^{2}=h_{\theta_{1}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{1}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{1}}\right)^{2}=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})\left[cos^{2}(\theta_{1})+sin^{2}(\theta_{1})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{h_{1}^{2}=h_{\theta_{1}}^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{2}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{2}}\right)^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})cos^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})\left[cos^{2}(\theta_{2})+sin^{2}(\theta_{2})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{h_{2}^{2}=h_{\theta_{2}}^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{3}^{2}=h_{\theta_{3}}^{2}=\left(\frac{\partial x_{1}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\theta_{3}}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\theta_{3}}\right)^{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})cos^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})cos^{2}(\theta_{3})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{2})cos^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})\left[sin^{2}(\theta_{2})+cos^{2}(\theta_{2})\right]+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{h_{3}^{2}=h_{\theta_{3}}^{2}=a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{4}^{2}=h_{\chi}^{2}=\left(\frac{\partial x_{1}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{2}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{3}}{\partial\chi}\right)^{2}+\left(\frac{\partial x_{4}}{\partial\chi}\right)^{2}=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{1})sin^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)cos^{2}(\theta_{1})sin^{2}(\theta_{2})sin^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++a^{2}cosh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})\left[sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right]+a^{2}cosh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}cosh^{2}(\chi)cos^{2}(\theta_{2})sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})\left[sin^{2}(\theta_{2})+cos^{2}(\theta_{2})\right]+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}cosh^{2}(\chi)sin^{2}(\theta_{3})+a^{2}sinh^{2}(\chi)cos^{2}(\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{h_{4}^{2}=h_{\chi}^{2}=a^{2}\left[cosh^{2}(\chi)sin^{2}(\theta_{3})+sinh^{2}(\chi)cos^{2}(\theta_{3})\right]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observa-se que 
+\begin_inset Formula $h_{3}^{2}=h_{\theta_{3}}^{2}=h_{4}^{2}=h_{\chi}^{2}$
+\end_inset
+
+ então 
+\begin_inset Formula $\sqrt{|g|}=h_{1}h_{2}h_{3}^{2}$
+\end_inset
+
+.
+ Agora é possível construir a matriz 
+\begin_inset Formula $\sqrt{|g|}g^{ij}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt{|g|}g^{ij}=h_{1}h_{2}h_{3}^{2}\left(\begin{array}{cccc}
+\frac{1}{h_{1}^{2}} & 0 & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0 & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}} & 0\\
+0 & 0 & 0 & \frac{1}{h_{4}^{2}}
+\end{array}\right)=\left(\begin{array}{cccc}
+\frac{h_{2}h_{3}^{2}}{h_{1}} & 0 & 0 & 0\\
+0 & \frac{h_{1}h_{3}^{2}}{h_{2}} & 0 & 0\\
+0 & 0 & h_{1}h_{2} & 0\\
+0 & 0 & 0 & h_{1}h_{2}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplica-se os resultados no Operador de Laplace-Beltrami e chega-se em:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\left[\frac{\partial}{\partial q_{1}}\left(\sqrt{\left\vert g\right\vert }g^{11}\frac{\partial u}{\partial q_{1}}\right)+\frac{\partial}{\partial q_{2}}\left(\sqrt{\left\vert g\right\vert }g^{22}\frac{\partial u}{\partial q_{2}}\right)+\frac{\partial}{\partial q_{3}}\left(\sqrt{\left\vert g\right\vert }g^{33}\frac{\partial u}{\partial q_{3}}\right)++\frac{\partial}{\partial q_{4}}\left(\sqrt{\left\vert g\right\vert }g^{44}\frac{\partial u}{\partial q_{4}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\Delta u & =\frac{1}{h_{1}h_{2}h_{3}^{2}}\left[\frac{\partial}{\partial\theta_{1}}\left(\frac{h_{2}h_{3}^{2}}{h_{1}}\frac{\partial u}{\partial\theta_{1}}\right)+\frac{\partial}{\partial\theta_{2}}\left(\frac{h_{1}h_{3}^{2}}{h_{2}}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\theta_{3}}\left(h_{1}h_{2}\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(h_{1}h_{2}\frac{\partial u}{\partial\chi}\right)\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{h_{1}h_{2}h_{3}^{2}}=\frac{1}{a^{4}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{h_{2}h_{3}^{2}}{h_{1}}=\frac{a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}{sin(\theta_{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{h_{1}h_{3}^{2}}{h_{2}}=sin(\theta_{2})a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{1}h_{2}=a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vê-se que 
+\begin_inset Formula $\frac{h_{2}h_{3}^{2}}{h_{1}}$
+\end_inset
+
+ não depende de 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+, logo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\theta_{1}}\left(\frac{h_{2}h_{3}^{2}}{h_{1}}\frac{\partial u}{\partial\theta_{1}}\right)=\frac{h_{2}h_{3}^{2}}{h_{1}}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}=\frac{a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}{sin(\theta_{2})}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O Laplaciano fica então:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{h_{1}h_{2}h_{3}^{2}}\left[\frac{h_{2}h_{3}^{2}}{h_{1}}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}+\frac{\partial}{\partial\theta_{2}}\left(\frac{h_{1}h_{3}^{2}}{h_{2}}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\theta_{3}}\left(h_{1}h_{2}\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(h_{1}h_{2}\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{h_{1}h_{2}h_{3}^{2}}\left[\frac{\partial}{\partial\theta_{2}}\left(\frac{h_{1}h_{3}^{2}}{h_{2}}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\theta_{3}}\left(h_{1}h_{2}\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(h_{1}h_{2}\frac{\partial u}{\partial\chi}\right)\right]+\frac{1}{h_{1}^{2}}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para finalmente encontrar a expressão do Laplaciano, aplica-se as expressões
+ para dos coeficientes métricos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{\Delta u=\frac{1}{a^{4}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}[\frac{\partial}{\partial\theta_{2}}\left(sin(\theta_{2})a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]\frac{\partial u}{\partial\theta_{2}}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{+\frac{\partial}{\partial\theta_{3}}\left(a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{+\frac{1}{a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+OBS1: Não consegui simplificar 
+\begin_inset Formula $a^{4}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+OBS2: Utilizando outro Software de Matemática Simbólica (Python utilizando
+ o pacote SymPy ) eu encontro a expressão (1) simplificada na forma 
+\begin_inset Formula $h_{3}^{2}=h_{\theta_{3}}^{2}=h_{4}^{2}=h_{\chi}^{2}=a^{2}\left[sin^{2}(\theta_{3})+sinh^{2}(\chi)\right]$
+\end_inset
+
+.
+ Porém, fazendo à mão, eu não consegui entender como ele chegou nisso e,
+ portanto, não usei essa simplificação.
+ Vale a pena ressaltar que essa expressão simplificaria um pouco mais o
+ Laplaciano.
+ Além disso, no resultado que encontrei anteriormente (
+\series default
+Laplaciano hiperboloide de 1 folha (4-dim)
+\series bold
+) usei a simplificação encontrada no outro Software de Matemática Simbólica
+ (mas não verifiquei o resultado à mão.
+ Falha minha).
+\end_layout
+
+\begin_layout Section
+Comparando Resultados
+\end_layout
+
+\begin_layout Standard
+Ao comparar o 
+\series bold
+Laplaciano Hiperboloide de 1 Folha
+\series default
+ (3-dim):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{a^{3}cosh(\chi)\,sin(\theta_{2})\left[sinh^{2}(\chi)sin^{2}(\theta_{2})+cosh^{2}(\chi)cos^{2}(\theta_{2})\right]}\left[\frac{\partial}{\partial\theta_{2}}\left(a\,cosh(\chi)\,sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(a\,cosh(\chi)\,sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\frac{1}{a^{2}\,cosh^{2}(\chi)\,sin^{2}(\theta_{2})}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Com o 
+\series bold
+Laplaciano Hiperboloide de 2 Folhas
+\series default
+ (3-dim):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{\Delta u=\frac{1}{a^{3}sinh(\chi)sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{2})+cosh^{2}(\chi)sin^{2}(\theta_{2})\right]}\left[\frac{\partial}{\partial\theta_{2}}\left(a\,sinh(\chi)\,sin(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\chi}\left(a\,sinh(\chi)\,sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{+\frac{1}{a^{2}\,sinh^{2}(\chi)\,sin^{2}(\theta_{2})}\frac{\partial²u}{\partial\theta_{1}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Percebe-se que a principal diferença são algumas trocas de 
+\begin_inset Formula $sin(\theta_{2})$
+\end_inset
+
+ por 
+\begin_inset Formula $cos(\theta_{2})$
+\end_inset
+
+ e, principalmente, de 
+\begin_inset Formula $cosh(\chi)$
+\end_inset
+
+ por 
+\begin_inset Formula $sinh(\chi)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Quando compara-se o 
+\series bold
+Laplaciano Hiperboloide de 1 Folha
+\series default
+ (4-dim) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[ 
+\backslash
+Delta u=
+\backslash
+frac{1}{a^{4}sin(
+\backslash
+theta_{2})sin^{2}(
+\backslash
+theta_{3})cosh^{2}(
+\backslash
+chi)[
+\backslash
+cosh^{2}
+\backslash
+left(
+\backslash
+chi
+\backslash
+right)-
+\backslash
+sin^{2}
+\backslash
+left(
+\backslash
+theta_{3}
+\backslash
+right)]}
+\backslash
+left[
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial
+\backslash
+theta_{2}}
+\backslash
+left(-a^{2}sin(
+\backslash
+theta_{2})[
+\backslash
+sin^{2}
+\backslash
+left(
+\backslash
+theta_{3}
+\backslash
+right)-
+\backslash
+cosh^{2}
+\backslash
+left(
+\backslash
+chi
+\backslash
+right)]
+\backslash
+frac{
+\backslash
+partial u}{
+\backslash
+partial
+\backslash
+theta_{2}}
+\backslash
+right) 
+\backslash
+right.
+ 
+\backslash
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+[ +
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial
+\backslash
+theta_{3}}
+\backslash
+left(a^{2}
+\backslash
+sin
+\backslash
+left(
+\backslash
+theta_{2}
+\backslash
+right)
+\backslash
+sin^{2}
+\backslash
+left(
+\backslash
+theta_{3}
+\backslash
+right)
+\backslash
+cosh^{2}
+\backslash
+left(
+\backslash
+chi
+\backslash
+right)
+\backslash
+frac{
+\backslash
+partial u}{
+\backslash
+partial
+\backslash
+theta_{3}}
+\backslash
+right) 
+\backslash
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+[ 
+\backslash
+left.
+ +
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial
+\backslash
+chi}
+\backslash
+left(a^{2}
+\backslash
+sin
+\backslash
+left(
+\backslash
+theta_{2}
+\backslash
+right)
+\backslash
+sin^{2}
+\backslash
+left(
+\backslash
+theta_{3}
+\backslash
+right)
+\backslash
+cosh^{2}
+\backslash
+left(
+\backslash
+chi
+\backslash
+right)
+\backslash
+frac{
+\backslash
+partial u}{
+\backslash
+partial
+\backslash
+chi}
+\backslash
+right) 
+\backslash
+right] 
+\backslash
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+[ -
+\backslash
+left(
+\backslash
+frac{1}{a^{2}sin^{2}(
+\backslash
+theta_{2})sin^{3}(
+\backslash
+theta_{3})cosh^{2}(
+\backslash
+chi)}
+\backslash
+right)
+\backslash
+frac{
+\backslash
+partial^{2}u}{
+\backslash
+partial
+\backslash
+theta_{1}^{2}} 
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Com o 
+\series bold
+Laplaciano Hiperboloide de 2 Folha
+\series default
+ (4-dim).
+\begin_inset Formula 
+\[
+\Delta u=\frac{1}{a^{4}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]}[\frac{\partial}{\partial\theta_{2}}\left(sin(\theta_{2})a^{2}\left[sinh^{2}(\chi)cos^{2}(\theta_{3})+cosh^{2}(\chi)sin^{2}(\theta_{3})\right]\frac{\partial u}{\partial\theta_{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\frac{\partial}{\partial\theta_{3}}\left(a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(a^{2}sinh^{2}(\chi)sin^{2}(\theta_{3})sin(\theta_{2})\frac{\partial u}{\partial\chi}\right)]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
++\frac{1}{a^{2}sinh^{2}(\chi)sin^{2}(\theta_{2})sin^{2}(\theta_{3})}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Percebe-se que a principal diferença são algumas trocas de 
+\begin_inset Formula $cosh(\chi)$
+\end_inset
+
+ por 
+\begin_inset Formula $sinh(\chi)$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

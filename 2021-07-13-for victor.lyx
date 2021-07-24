@@ -1,0 +1,197 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /home/victor/Documentos/Material TCC/
+\textclass article
+\begin_preamble
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sat Oct 14 01:01:49 2006}
+%TCIDATA{LastRevised=Tuesday, July 13, 2021 18:21:59}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Journal Articles\Standard LaTeX Article">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\textheight=26.5cm
+\textwidth=18cm
+\oddsidemargin=-1.0cm
+\evensidemargin=-1.0cm
+\topmargin=-2.5cm
+\def\baselinestretch{1.6}
+
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Section
+Laplaciano na parametrização que descreve hiperboloide de 2 folhas
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Standard
+determinar o Laplaciano na parametrização que descreve hiperboloide de 2 folhas
+\end_layout
+
+\begin_layout Standard
+em 3 dim
+\begin_inset Formula \begin{eqnarray*}
+x_{3} &=&a\cosh \chi \cos \theta _{2} \\
+x_{2} &=&a\sinh \chi \sin \theta _{2}\cos \theta _{1} \\
+x_{1} &=&a\sinh \chi \sin \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ 0\leq \theta _{2}\leq \pi ,\ 0\leq \theta _{1}<2\pi 
+\end{eqnarray*}
+\end_inset
+
+em 4 dim
+\begin_inset Formula \begin{eqnarray*}
+x_{4} &=&a\cosh \chi \cos \theta _{3} \\
+x_{3} &=&a\sinh \chi \sin \theta _{3}\cos \theta _{2} \\
+x_{2} &=&a\sinh \chi \sin \theta _{3}\sin \theta _{2}\cos \theta _{1} \\
+x_{1} &=&a\sinh \chi \sin \theta _{3}\sin \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ 0\leq \theta _{3},\theta _{2}\leq \pi ,\ 0\leq
+\theta _{1}<2\pi 
+\end{eqnarray*}
+\end_inset
+
+ver a diferença com a parametrização que usamos ja, que descreve hiperboloide de 1 folha
+\begin_inset Formula \begin{equation*}
+\end{equation*}
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+e ainda
+\end_layout
+
+\begin_layout Standard
+- determinar curvatura do hiperboloide em 3d (2d-superficie) e 4d (3d-hiper-superficie)
+\end_layout
+
+\begin_layout Standard
+depois generalizamos para N-hiperboloide
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Standard
+como adjacente:
+\end_layout
+
+\begin_layout Standard
+- determinar curvatura do elipsoide em 3d (2d-superficie) e 4d (3d-hiper-superficie)
+\end_layout
+
+\begin_layout Standard
+depois generalizamos para N-elipsoide
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Standard
+como ja aprendeu a técnica podemos aplica-la para determinação o Laplaciano na pseudo-esfera (curvatura negativa constante)
+\end_layout
+
+\begin_layout Standard
+no inicio em 3d (2d-superficie), depois em 4d (3d-hiper-superficie)
+\end_layout
+
+\begin_layout Standard
+depois generalizamos para N-pseudo-esfera
+\end_layout
+
+\end_body
+\end_document

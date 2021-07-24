@@ -1,0 +1,151 @@
+%% LyX 2.3.6.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{babel}
+\begin{document}
+Encontrar Laplaciano nessas coordenadas
+
+\begin{eqnarray*}
+x_{4} & = & a\sinh\chi\cos\theta_{3}\\
+x_{3} & = & a\cosh\chi\sin\theta_{3}\cos\theta_{2}\\
+x_{2} & = & a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{3},\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+Utilizando o Operador de Laplace-Beltrami
+
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\frac{\partial}{\partial q_{i}}\left(\sqrt{\left\vert g\right\vert }g^{ij}\frac{\partial u}{\partial q_{j}}\right)
+\]
+
+De acordo com Arfken(2017), podemos determinar o tensor métrico $g_{ij}$
+
+\[
+G=(g_{ij})=\underset{k}{\sum}\frac{\partial x_{k}}{\partial q_{_{^{i}}}}\frac{\partial x_{^{_{k}}}}{\partial q_{_{^{j}}}}
+\]
+
+Porém, de acordo com Riley(2006), se o sistema de coordenadas for
+ortogonal tem-se:
+
+\[
+g_{ij}=\begin{cases}
+h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\[
+G=(g_{ij})=\left(\begin{array}{cccc}
+h_{1}^{2} & 0 & 0 & 0\\
+0 & h_{2}^{2} & 0 & 0\\
+0 & 0 & h_{3}^{2} & 0\\
+0 & 0 & 0 & h_{4}^{2}
+\end{array}\right)
+\]
+
+\[
+g^{ij}=\begin{cases}
+1/h_{i}^{2} & ,i=j\\
+0 & ,i\neq j
+\end{cases}
+\]
+
+\[
+G^{-1}=(g^{ij})=\left(\begin{array}{cccc}
+\frac{1}{h_{1}^{2}} & 0 & 0 & 0\\
+0 & \frac{1}{h_{2}^{2}} & 0 & 0\\
+0 & 0 & \frac{1}{h_{3}^{2}} & 0\\
+0 & 0 & 0 & \frac{1}{h_{4}^{2}}
+\end{array}\right)
+\]
+
+E temos o determinante $g=det(g_{ij})=h_{1}^{2}h_{2}^{2}h_{3}^{2}h_{4}^{2}$
+
+Determinando os Coeficientes Métricos:
+\begin{align*}
+h_{1}^{2} & =h_{\theta_{1}}^{2}=a^{2}\sin^{2}\left(\theta_{2}\right)\sin^{2}\left(\theta_{3}\right)\cosh^{2}\left(\chi\right)
+\end{align*}
+
+\[
+h_{2}^{2}=h_{\theta_{2}}^{2}=a^{2}\sin^{2}\left(\theta_{3}\right)\cosh^{2}\left(\chi\right)
+\]
+
+\[
+h_{3}^{2}=h_{\theta_{3}}^{2}=-a^{2}[\sin^{2}\left(\theta_{3}\right)-\cosh^{2}\left(\chi\right)]
+\]
+
+\[
+h_{4}^{2}=h_{\chi}^{2}=-a^{2}[\sin^{2}\left(\theta_{3}\right)-\cosh^{2}\left(\chi\right)]
+\]
+
+Ora $h_{3}=h_{4}$ então $\sqrt{|g|}=h_{1}h_{2}h_{3}^{2}$
+
+\[
+\sqrt{|g|}=h_{1}h_{2}h_{3}^{2}=a^{4}sin(\theta_{2})sin^{2}(\theta_{3})cosh^{2}(\chi)[\cosh^{2}\left(\chi\right)-\sin^{2}\left(\theta_{3}\right)]
+\]
+
+Então a matriz $\sqrt{|g|}g^{ij}$:
+
+\[
+\sqrt{|g|}g^{ij}=\left(\begin{array}{cccc}
+\frac{h_{2}h_{3}^{2}}{h_{1}} & 0 & 0 & 0\\
+0 & \frac{h_{1}h_{3}^{2}}{h_{2}} & 0 & 0\\
+0 & 0 & h_{1}h_{2} & 0\\
+0 & 0 & 0 & h_{1}h_{2}
+\end{array}\right)
+\]
+
+Utilizando o Operador de Laplace-Beltrami:
+
+\[
+\Delta u=\frac{1}{\sqrt{\left\vert g\right\vert }}\left[\frac{\partial}{\partial\theta_{1}}\left(\sqrt{\left\vert g\right\vert }g^{11}\frac{\partial u}{\partial\theta_{1}}\right)+\frac{\partial}{\partial\theta_{2}}\left(\sqrt{\left\vert g\right\vert }g^{22}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{\partial}{\partial\theta_{3}}\left(\sqrt{\left\vert g\right\vert }g^{33}\frac{\partial u}{\partial\theta_{3}}\right)+\frac{\partial}{\partial\chi}\left(\sqrt{\left\vert g\right\vert }g^{44}\frac{\partial u}{\partial\chi}\right)\right]
+\]
+
+Fazendo por partes:
+
+\[
+\frac{\partial}{\partial\theta_{1}}\left(\sqrt{\left\vert g\right\vert }g^{11}\frac{\partial u}{\partial\theta_{1}}\right)=\frac{\partial}{\partial\theta_{1}}\left(-\frac{a^{2}[\sin^{2}\left(\theta_{3}\right)-\cosh^{2}\left(\chi\right)]}{\sin\left(\theta_{2}\right)}\frac{\partial u}{\partial q_{1}}\right)=\left(-\frac{a^{2}[\sin^{2}\left(\theta_{3}\right)-\cosh^{2}\left(\chi\right)]}{\sin\left(\theta_{2}\right)}\right)\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+\[
+\frac{\partial}{\partial\theta_{2}}\left(\sqrt{\left\vert g\right\vert }g^{22}\frac{\partial u}{\partial\theta_{2}}\right)=\frac{\partial}{\partial\theta_{2}}\left(-a^{2}sin(\theta_{2})[\sin^{2}\left(\theta_{3}\right)-\cosh^{2}\left(\chi\right)]\frac{\partial u}{\partial\theta_{2}}\right)
+\]
+
+\[
+\frac{\partial}{\partial\theta_{3}}\left(\sqrt{\left\vert g\right\vert }g^{33}\frac{\partial u}{\partial\theta_{3}}\right)=\frac{\partial}{\partial\theta_{3}}\left(a^{2}\sin\left(\theta_{2}\right)\sin^{2}\left(\theta_{3}\right)\cosh^{2}\left(\chi\right)\frac{\partial u}{\partial\theta_{3}}\right)
+\]
+
+\[
+\frac{\partial}{\partial\chi}\left(\sqrt{\left\vert g\right\vert }g^{44}\frac{\partial u}{\partial\chi}\right)=\frac{\partial}{\partial\chi}\left(a^{2}\sin\left(\theta_{2}\right)\sin^{2}\left(\theta_{3}\right)\cosh^{2}\left(\chi\right)\frac{\partial u}{\partial\chi}\right)
+\]
+
+Multiplicando $\frac{\partial}{\partial\theta_{1}}\left(\sqrt{\left\vert g\right\vert }g^{11}\frac{\partial u}{\partial\theta_{1}}\right)$
+pelo fator $\frac{1}{\sqrt{\left\vert g\right\vert }}$, encontramos:
+
+\[
+\frac{1}{\sqrt{\left\vert g\right\vert }}\frac{\partial}{\partial\theta_{1}}\left(\sqrt{\left\vert g\right\vert }g^{11}\frac{\partial u}{\partial\theta_{1}}\right)=\left(-\frac{1}{a^{2}sin^{2}(\theta_{2})sin^{3}(\theta_{3})cosh^{2}(\chi)}\right)\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+Então temos o Laplaciano:
+
+\[
+\Delta u=\frac{1}{a^{4}sin(\theta_{2})sin^{2}(\theta_{3})cosh^{2}(\chi)[\cosh^{2}\left(\chi\right)-\sin^{2}\left(\theta_{3}\right)]}[\frac{\partial}{\partial\theta_{2}}\left(-a^{2}sin(\theta_{2})[\sin^{2}\left(\theta_{3}\right)-\cosh^{2}\left(\chi\right)]\frac{\partial u}{\partial\theta_{2}}\right)
+\]
+
+\[
++\frac{\partial}{\partial\theta_{3}}\left(a^{2}\sin\left(\theta_{2}\right)\sin^{2}\left(\theta_{3}\right)\cosh^{2}\left(\chi\right)\frac{\partial u}{\partial\theta_{3}}\right)
+\]
+
+\[
++\frac{\partial}{\partial\chi}\left(a^{2}\sin\left(\theta_{2}\right)\sin^{2}\left(\theta_{3}\right)\cosh^{2}\left(\chi\right)\frac{\partial u}{\partial\chi}\right)]
+\]
+
+\[
+-\left(\frac{1}{a^{2}sin^{2}(\theta_{2})sin^{3}(\theta_{3})cosh^{2}(\chi)}\right)\frac{\partial^{2}u}{\partial\theta_{1}^{2}}
+\]
+
+\end{document}

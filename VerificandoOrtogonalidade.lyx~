@@ -1,0 +1,991 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+De modo geral, para verificar a ortogonalidade do sistema de coordenadas
+ é necessário verificar se os vetores da base do sistema (
+\begin_inset Formula $\boldsymbol{e}_{i}$
+\end_inset
+
+) são ortogonais.
+ Para isso, basta verificar se o produto escalar, entre dois vetores da
+ base, é nulo ou seja:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{i}\cdot\boldsymbol{e}_{j}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Porém, antes disso, é necessário encontrar os vetores da base.
+ Para isto, basta tomar 
+\begin_inset Formula $\boldsymbol{r}(q_{1},q_{2},q_{3},...,q_{n})$
+\end_inset
+
+ e tem-se o seguinte:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{i}=\frac{\partial\boldsymbol{r}}{\partial q_{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Verificando Ortogonalidade do Hiperbolóide 3-dim (3-Hiperboloide?) de 1
+ Folha
+\end_layout
+
+\begin_layout Standard
+Verificar a ortogonalidade do seguinte sistema de coordenadas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{3} & = & a\sinh\chi\cos\theta_{2}\\
+x_{2} & = & a\cosh\chi\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\cosh\chi\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{r=}(a\cosh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+(a\cosh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+(a\sinh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{1}}=\left(\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,cosh(\chi)cos(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{i}}-a\,cosh(\chi)sin(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{j}}+0\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{2}}=\left(\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,cosh(\chi)sin(\theta_{1})cos(\theta_{2})\boldsymbol{\widehat{i}}+a\,cosh(\chi)cos(\theta_{1})cos(\theta_{2})\boldsymbol{\widehat{j}}-a\,sinh(\chi)sin(\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\chi}=\frac{\partial\boldsymbol{r}}{\partial\chi}=\left(\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\chi}(a\sinh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,sinh(\chi)sin(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{i}}+a\,sinh(\chi)cos(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{j}}+a\,cosh(\chi)cos(\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agora basta verificar a ortogonalidade dois a dois entre estes vetores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{2}}=\left(a^{2}\,cosh^{2}(\chi)cos(\theta_{1})sin(\theta_{2})sin(\theta_{1})cos(\theta_{2})-a^{2}\,cosh^{2}(\chi)sin(\theta_{1})sin(\theta_{2})cos(\theta_{1})cos(\theta_{2})\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,cosh(\chi)cos(\theta_{1})sin^{2}(\theta_{2})sinh(\chi)sin(\theta_{1})-a^{2}\,cosh(\chi)sin(\theta_{1})sin^{2}(\theta_{2})sinh(\chi)cos(\theta_{1})\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,cosh(\chi)sin^{2}(\theta_{1})cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})+a^{2}\,cosh(\chi)cos^{2}(\theta_{1})cos(\theta_{2})sinh(\chi)sin(\theta_{2})-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}\,cosh(\chi)cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})\left(sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right)-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}\,cosh(\chi)cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verificada a ortogonalidade entre os vetores da base, pode-se dizer que
+ o sistema de coordenadas é ortogonal.
+\end_layout
+
+\begin_layout Section*
+Verificando Ortogonalidade do Hiperbolóide 3-dim (3-Hiperboloide?) de 2
+ Folhas
+\end_layout
+
+\begin_layout Standard
+Verificar a ortogonalidade do seguinte sistema de coordenadas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{3} & = & a\cosh\chi\cos\theta_{2}\\
+x_{2} & = & a\sinh\chi\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\sinh\chi\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{r=}(a\sinh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+(a\sinh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+(a\cosh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{1}}=\left(\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,sinh(\chi)cos(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{i}}-a\,sinh(\chi)sin(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{j}}+0\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{2}}=\left(\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,sinh(\chi)sin(\theta_{1})cos(\theta_{2})\boldsymbol{\widehat{i}}+a\,sinh(\chi)cos(\theta_{1})cos(\theta_{2})\boldsymbol{\widehat{j}}-a\,cosh(\chi)sin(\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\chi}=\frac{\partial\boldsymbol{r}}{\partial\chi}=\left(\frac{\partial}{\partial\chi}(a\sinh\chi\sin\theta_{2}\sin\theta_{1})\boldsymbol{\widehat{i}}+\frac{\partial}{\partial\chi}(a\sinh\chi\sin\theta_{2}\cos\theta_{1})\boldsymbol{\widehat{j}}+\frac{\partial}{\partial\chi}(a\cosh\chi\cos\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,cosh(\chi)sin(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{i}}+a\,cosh(\chi)cos(\theta_{1})sin(\theta_{2})\boldsymbol{\widehat{j}}+a\,sinh(\chi)cos(\theta_{2})\boldsymbol{\widehat{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agora basta verificar a ortogonalidade dois a dois entre estes vetores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{2}}=\left(a^{2}\,sinh^{2}(\chi)cos(\theta_{1})sin(\theta_{2})sin(\theta_{1})cos(\theta_{2})-a^{2}\,sinh^{2}(\chi)sin(\theta_{1})sin(\theta_{2})cos(\theta_{1})cos(\theta_{2})\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,cosh(\chi)cos(\theta_{1})sin^{2}(\theta_{2})sinh(\chi)sin(\theta_{1})-a^{2}\,cosh(\chi)sin(\theta_{1})sin^{2}(\theta_{2})sinh(\chi)cos(\theta_{1})\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,cosh(\chi)sin^{2}(\theta_{1})cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})+a^{2}\,cosh(\chi)cos^{2}(\theta_{1})cos(\theta_{2})sinh(\chi)sin(\theta_{2})-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}\,cosh(\chi)cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})\left(sin^{2}(\theta_{1})+cos^{2}(\theta_{1})\right)-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}\,cosh(\chi)cos(\theta_{2})\,sinh(\chi)sin(\theta_{2})-a^{2}\,sinh(\chi)sin(\theta_{2})cosh(\chi)cos(\theta_{2})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verificada a ortogonalidade entre os vetores da base, pode-se dizer que
+ o sistema de coordenadas é ortogonal.
+\end_layout
+
+\begin_layout Section*
+Verificando Ortogonalidade do Hiperbolóide 4-dim (4-Hiperboloide?) de 1
+ Folha
+\end_layout
+
+\begin_layout Standard
+Verificar a ortogonalidade do seguinte sistema de coordenadas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{4} & = & a\sinh\chi\cos\theta_{3}\\
+x_{3} & = & a\cosh\chi\sin\theta_{3}\cos\theta_{2}\\
+x_{1} & = & a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}\\
+x_{2} & = & a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{3},\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{r=}\left(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1},\,a\cosh\chi\sin\theta_{3}\cos\theta_{2},\,a\sinh\chi\cos\theta_{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{1}}=\left(\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\sin\theta_{3}\cos\theta_{2}),\,\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\cos\theta_{3})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(-a\cosh\chi\sin\theta_{3}\sin\theta_{2}sin\theta_{1},a\cosh\chi\sin\theta_{3}\sin\theta_{2}cos\theta_{1},\,0,\,0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{2}}=\left(\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\sin\theta_{3}\cos\theta_{2}),\,\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\cos\theta_{3})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\cosh\chi\sin\theta_{3}cos\theta_{2}\cos\theta_{1},\,a\cosh\chi\sin\theta_{3}cos\theta_{2}\sin\theta_{1},\,-a\cosh\chi\sin\theta_{3}sin\theta_{2},0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{3}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{3}}=\left(\frac{\partial}{\partial\theta_{3}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{3}}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{3}}(a\cosh\chi\sin\theta_{3}\cos\theta_{2}),\,\frac{\partial}{\partial\theta_{3}}(a\sinh\chi\cos\theta_{3})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\cosh\chi cos\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\cosh\chi cos\theta_{3}\sin\theta_{2}\sin\theta_{1},a\cosh\chi cos\theta_{3}\cos\theta_{2},\,-a\sinh\chi sin\theta_{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\chi}=\frac{\partial\boldsymbol{r}}{\partial\chi}=\left(\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\chi}(a\cosh\chi\sin\theta_{3}\cos\theta_{2}),\,\frac{\partial}{\partial\chi}(a\sinh\chi\cos\theta_{3})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\,sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1},\,a\,sinh\chi\sin\theta_{3}\cos\theta_{2},\,a\,cosh\chi\cos\theta_{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agora basta verificar a ortogonalidade dois a dois entre estes vetores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{2}}=\left(-a^{2}\cosh^{2}\chi\sin^{2}\theta_{3}\sin\theta_{2}sin\theta_{1}\,cos\theta_{2}\cos\theta_{1}+a^{2}\cosh^{2}\chi\sin^{2}\theta_{3}\sin\theta_{2}cos\theta_{1}cos\theta_{2}\sin\theta_{1}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{3}}=\left(-a^{2}\cosh^{2}\chi\sin\theta_{3}\sin^{2}\theta_{2}sin\theta_{1}cos\theta_{3}\cos\theta_{1}+a^{2}\cosh^{2}\chi\sin\theta_{3}\sin^{2}\theta_{2}cos\theta_{1}cos\theta_{3}\sin\theta_{1}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\chi}=\left(-a^{2}\cosh\chi\sin^{2}\theta_{3}\sin^{2}\theta_{2}sin\theta_{1}sinh\chi\cos\theta_{1}+a^{2}\cosh\chi\sin^{2}\theta_{3}\sin^{2}\theta_{2}cos\theta_{1}\,sinh\chi\sin\theta_{1}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\theta_{3}}=\left(a^{2}\cosh^{2}\chi\sin\theta_{3}cos\theta_{2}\cos^{2}\theta_{1}cos\theta_{3}\sin\theta_{2}+a^{2}\cosh^{2}\chi\sin\theta_{3}cos\theta_{2}\sin^{2}\theta_{1}cos\theta_{3}\sin\theta_{2}-a^{2}\cosh^{2}\chi\sin\theta_{3}sin\theta_{2}cos\theta_{3}\cos\theta_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a^{2}\cosh^{2}\chi\sin\theta_{3}cos\theta_{2}cos\theta_{3}\sin\theta_{2}-a^{2}\cosh^{2}\chi\sin\theta_{3}sin\theta_{2}cos\theta_{3}\cos\theta_{2}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\cosh\chi\sin^{2}\theta_{3}cos\theta_{2}\cos^{2}\theta_{1}sinh\chi\sin\theta_{2}+\,a^{2}\cosh\chi\sin^{2}\theta_{3}cos\theta_{2}\sin^{2}\theta_{1}\,sinh\chi\sin\theta_{2}-a^{2}\cosh\chi\sin^{2}\theta_{3}sin\theta_{2}\,sinh\chi\cos\theta_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a^{2}\cosh\chi\sin^{2}\theta_{3}cos\theta_{2}sinh\chi\sin\theta_{2}-a^{2}\cosh\chi\sin^{2}\theta_{3}sin\theta_{2}\,sinh\chi\cos\theta_{2}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{3}}\cdot\boldsymbol{e}_{\chi}=(a^{2}\cosh\chi cos\theta_{3}\sin^{2}\theta_{2}\cos^{2}\theta_{1}sinh\chi\sin\theta_{3}+a^{2}\cosh\chi cos\theta_{3}\sin^{2}\theta_{2}\sin^{2}\theta_{1}\,sinh\chi\sin\theta_{3}+a^{2}\cosh\chi cos\theta_{3}\cos^{2}\theta_{2}\,sinh\chi\sin\theta_{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-a^{2}\sinh\chi sin\theta_{3}\,cosh\chi\cos\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}\cosh\chi cos\theta_{3}\sin^{2}\theta_{2}sinh\chi\sin\theta_{3}+a^{2}\cosh\chi cos\theta_{3}\cos^{2}\theta_{2}\,sinh\chi\sin\theta_{3}-a^{2}\sinh\chi sin\theta_{3}\,cosh\chi\cos\theta_{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}\cosh\chi cos\theta_{3}sinh\chi\sin\theta_{3}-a^{2}\sinh\chi sin\theta_{3}\,cosh\chi\cos\theta_{3}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verificada a ortogonalidade entre os vetores da base, pode-se dizer que
+ o sistema de coordenadas é ortogonal.
+\end_layout
+
+\begin_layout Section*
+Verificando Ortogonalidade do Hiperbolóide 4-dim (4-Hiperboloide?) de 2
+ Folhas
+\end_layout
+
+\begin_layout Standard
+Verificar a ortogonalidade do seguinte sistema de coordenadas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{4} & = & a\cosh\chi\cos\theta_{3}\\
+x_{3} & = & a\sinh\chi\sin\theta_{3}\cos\theta_{2}\\
+x_{2} & = & a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}\\
+x_{1} & = & a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}\\
+0 & \leq & \chi<\infty,\ 0\leq\theta_{3},\theta_{2}\leq\pi,\ 0\leq\theta_{1}<2\pi
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{r=}\left(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1},\,a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\sinh\chi\sin\theta_{3}\cos\theta_{2},\,a\cosh\chi\cos\theta_{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{1}}=\left(\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{1}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{1}}(\,a\sinh\chi\sin\theta_{3}\cos\theta_{2}),\,\frac{\partial}{\partial\theta_{1}}(a\cosh\chi\cos\theta_{3})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,sinh\chi\sin\theta_{3}\sin\theta_{2}cos\theta_{1},-a\sinh\chi\sin\theta_{3}\sin\theta_{2}sin\theta_{1},\,0,\,0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{2}}=\left(\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{2}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{2}}(\,a\sinh\chi\sin\theta_{3}\cos\theta_{2}),\,\frac{\partial}{\partial\theta_{2}}(a\cosh\chi\cos\theta_{3})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\sinh\chi\sin\theta_{3}cos\theta_{2}\sin\theta_{1},\,a\sinh\chi\sin\theta_{3}cos\theta_{2}\cos\theta_{1},\,-a\sinh\chi\sin\theta_{3}sin\theta_{2},0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{3}}=\frac{\partial\boldsymbol{r}}{\partial\theta_{3}}=\left(\frac{\partial}{\partial\theta_{3}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\theta_{3}}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\theta_{3}}(\,a\sinh\chi\sin\theta_{3}\cos\theta_{2}),\,\frac{\partial}{\partial\theta_{3}}(a\cosh\chi\cos\theta_{3})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\sinh\chi cos\theta_{3}\sin\theta_{2}\sin\theta_{1},\,a\sinh\chi cos\theta_{3}\sin\theta_{2}\cos\theta_{1},a\sinh\chi cos\theta_{3}\cos\theta_{2},\,-a\cosh\chi sin\theta_{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\chi}=\frac{\partial\boldsymbol{r}}{\partial\chi}=\left(\frac{\partial}{\partial\chi}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1}),\,\frac{\partial}{\partial\chi}(a\sinh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1}),\,\frac{\partial}{\partial\chi}(\,a\sinh\chi\sin\theta_{3}\cos\theta_{2}),\,\frac{\partial}{\partial\chi}(a\cosh\chi\cos\theta_{3})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a\,cosh\chi\sin\theta_{3}\sin\theta_{2}\sin\theta_{1},a\,cosh\chi\sin\theta_{3}\sin\theta_{2}\cos\theta_{1},\,a\,cosh\chi\sin\theta_{3}\cos\theta_{2},\,a\,sinh\chi\cos\theta_{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agora basta verificar a ortogonalidade dois a dois entre estes vetores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{2}}=\left(a^{2}\,sinh^{2}\chi\sin^{2}\theta_{3}\sin\theta_{2}cos\theta_{1}cos\theta_{2}\sin\theta_{1}-a^{2}\sinh^{2}\chi\sin^{2}\theta_{3}\sin\theta_{2}sin\theta_{1}\,cos\theta_{2}\cos\theta_{1}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\theta_{3}}=\left(a^{2}\,sinh^{2}\chi\sin\theta_{3}\sin^{2}\theta_{2}cos\theta_{1}cos\theta_{3}\sin\theta_{1}-a^{2}\sinh^{2}\chi\sin\theta_{3}\sin^{2}\theta_{2}sin\theta_{1}cos\theta_{3}\cos\theta_{1}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{1}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\,sinh\chi\sin^{2}\theta_{3}\sin^{2}\theta_{2}cos\theta_{1}cosh\chi\sin\theta_{1}-a^{2}\sinh\chi\sin^{2}\theta_{3}\sin^{2}\theta_{2}sin\theta_{1}cosh\chi\cos\theta_{1}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\theta_{3}}=\left(a^{2}\sinh^{2}\chi\sin\theta_{3}cos\theta_{2}\sin^{2}\theta_{1}cos\theta_{3}\sin\theta_{2}+a^{2}\sinh^{2}\chi\sin\theta_{3}cos\theta_{2}\cos^{2}\theta_{1}cos\theta_{3}\sin\theta_{2}-a^{2}\sinh^{2}\chi\sin\theta_{3}sin\theta_{2}cos\theta_{3}\cos\theta_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a^{2}\sinh^{2}\chi\sin\theta_{3}cos\theta_{2}cos\theta_{3}\sin\theta_{2}-a^{2}\sinh^{2}\chi\sin\theta_{3}sin\theta_{2}cos\theta_{3}\cos\theta_{2}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{2}}\cdot\boldsymbol{e}_{\chi}=\left(a^{2}\sinh\chi\sin^{2}\theta_{3}cos\theta_{2}\sin^{2}\theta_{1}cosh\chi\sin\theta_{2}+a^{2}\sinh\chi\sin^{2}\theta_{3}cos\theta_{2}\cos^{2}\theta_{1}cosh\chi\sin\theta_{2}-a^{2}\sinh\chi\sin^{2}\theta_{3}sin\theta_{2}cosh\chi\cos\theta_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left(a^{2}\sinh\chi\sin^{2}\theta_{3}cos\theta_{2}cosh\chi\sin\theta_{2}-a^{2}\sinh\chi\sin^{2}\theta_{3}sin\theta_{2}cosh\chi\cos\theta_{2}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e}_{\theta_{3}}\cdot\boldsymbol{e}_{\chi}=(a^{2}\sinh\chi cos\theta_{3}\sin^{2}\theta_{2}\sin^{2}\theta_{1}cosh\chi\sin\theta_{3}+a^{2}\sinh\chi cos\theta_{3}\sin^{2}\theta_{2}\cos^{2}\theta_{1}cosh\chi\sin\theta_{3}+a^{2}\sinh\chi cos\theta_{3}\cos^{2}\theta_{2}cosh\chi\sin\theta_{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-a^{2}\cosh\chi sin\theta_{3}sinh\chi\cos\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}\sinh\chi cos\theta_{3}\sin^{2}\theta_{2}cosh\chi\sin\theta_{3}+a^{2}\sinh\chi cos\theta_{3}\cos^{2}\theta_{2}cosh\chi\sin\theta_{3}-a^{2}\cosh\chi sin\theta_{3}sinh\chi\cos\theta_{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=a^{2}\sinh\chi cos\theta_{3}cosh\chi\sin\theta_{3}-a^{2}\cosh\chi sin\theta_{3}sinh\chi\cos\theta_{3}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verificada a ortogonalidade entre os vetores da base, pode-se dizer que
+ o sistema de coordenadas é ortogonal.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
