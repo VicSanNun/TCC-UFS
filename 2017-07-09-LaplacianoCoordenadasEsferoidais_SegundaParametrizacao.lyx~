@@ -428,6 +428,10 @@ a\,cosh(\chi)\,sen(\theta_{2})\left\{ a^{2}\left[senh^{2}(\chi)sen^{2}(\theta_{2
 \end_layout
 
 \begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \frac{\partial}{\partial\theta_{2}}\left(a\,cosh(\chi)\,sen(\theta_{2})\frac{\partial u}{\partial\theta_{2}}\right)=a\,cosh(\chi)\,cos(\theta_{2})\frac{\partial u}{\partial\theta_{2}}+a\,cosh(\chi)\,sen(\theta_{2})\frac{\partial^{2}u}{\partial\theta_{2}^{2}}=a\,cosh(\chi)\left[cos(\theta_{2})\frac{\partial u}{\partial\theta_{2}}+sen(\theta_{2})\frac{\partial^{2}u}{\partial\theta_{2}^{2}}\right]

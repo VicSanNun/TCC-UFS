@@ -1,0 +1,140 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sat Oct 14 01:01:49 2006}
+%TCIDATA{LastRevised=Saturday, July 24, 2021 16:51:15}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Journal Articles\Standard LaTeX Article">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\textheight=26.5cm
+\textwidth=18cm
+\oddsidemargin=-1.0cm
+\evensidemargin=-1.0cm
+\topmargin=-2.5cm
+\def\baselinestretch{1.6}
+\input{tcilatex}
+\begin{document}
+
+
+;
+
+\section{de solu\c{c}\~{a}o}
+
+;
+
+vamos passar para solu\c{c}\~{a}o agora. come\c{c}amos de eq. de Laplace
+para hiperb de 1 folha em 3 e 4 dim
+
+- leva as suas express\~{o}es para Laplacianos na forma seguinte:
+
+;
+
+o Laplaciano nas coordenadas esferoidais achatadas em 3 dim
+
+\begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\cos ^{2}\theta
+_{2}\right) }\left[ \frac{1}{\sin \theta _{2}}\frac{\partial }{\partial
+\theta _{2}}\left( \sin \theta _{2}\frac{\partial u}{\partial \theta _{2}}%
+\right) +\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh
+\chi \frac{\partial u}{\partial \chi }\right) \right]  \\
+&&+\frac{1}{a^{2}\sin ^{2}\theta _{2}\cosh ^{2}\chi }\frac{\partial ^{2}u}{%
+\partial \theta _{1}^{2}}\ \left( 3\ \dim \right) 
+\end{eqnarray*}
+
+o Laplaciano nas coordenadas esferoidais achatadas em 4 dim%
+\begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\cos ^{2}\theta
+_{3}\right) }\left( \frac{1}{\sin ^{2}\theta _{3}}\frac{\partial }{\partial
+\theta _{3}}\left( \sin ^{2}\theta _{3}\frac{\partial u}{\partial \theta _{3}%
+}\right) +\frac{1}{\cosh ^{2}\chi }\frac{\partial }{\partial \chi }\left(
+\cosh ^{2}\chi \frac{\partial u}{\partial \chi }\right) \right)  \\
+&&+\frac{1}{a^{2}\sin ^{2}\theta _{3}\cosh ^{2}\chi }\nabla _{S^{2}}^{2}u\
+\left( 4\ \dim \right) 
+\end{eqnarray*}%
+onde 
+\begin{equation*}
+\nabla _{S^{2}}^{2}u=\left[ \left( \frac{1}{\sin \theta _{2}}\frac{\partial 
+}{\partial \theta _{2}}\left( \sin \theta _{2}\frac{\partial u}{\partial
+\theta _{2}}\right) \right) +\frac{1}{\sin ^{2}\theta _{3}}\frac{\partial
+^{2}u}{\partial \theta _{1}^{2}}\right] 
+\end{equation*}%
+\'{e} o Laplaciano na esfera $S^{2}$
+
+;
+
+separa\c{c}\~{a}o de vari\'{a}veis, ainda para 4d
+
+aplicar o troco de vari\'{a}veis
+
+\begin{equation*}
+\xi =\cos \theta _{3},\ \zeta =\sinh \chi ,\ \theta _{1},\theta _{2}
+\end{equation*}%
+\begin{equation*}
+-1\leq \xi \leq 1,\ 0\leq \zeta <\infty ,\ 0\leq \theta _{1}<2\pi ,\ 0\leq
+\theta _{2},\theta _{3}<\pi 
+\end{equation*}%
+e separar a parte com $\left( \theta _{1},\theta _{2}\right) $ e a parte com 
+$\left( \theta _{3},\chi \right) $
+
+;
+
+\section{caso de 3 dim}
+
+;%
+\begin{eqnarray*}
+x_{3} &=&a\sinh \chi \cos \theta _{2} \\
+x_{2} &=&a\cosh \chi \sin \theta _{2}\cos \theta _{1} \\
+x_{1} &=&a\cosh \chi \sin \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ 0\leq \theta _{2}\leq \pi ,\ 0\leq \theta _{1}<2\pi 
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\cos ^{2}\theta
+_{2}\right) }\left[ \frac{1}{\sin \theta _{2}}\frac{\partial }{\partial
+\theta _{2}}\left( \sin \theta _{2}\frac{\partial u}{\partial \theta _{2}}%
+\right) +\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh
+\chi \frac{\partial u}{\partial \chi }\right) \right]  \\
+&&+\frac{1}{a^{2}\sin ^{2}\theta _{2}\cosh ^{2}\chi }\frac{\partial ^{2}u}{%
+\partial \theta _{1}^{2}}=0
+\end{eqnarray*}%
+aplica separa\c{c}\~{a}o de vari\'{a}veis na eq.
+
+1ro separar a variavel $\theta _{1}$ com a constante de separa\c{c}\~{a}o $%
+\lambda _{1}$
+
+depois separar as vari\'{a}veis $\theta _{2}$ e $\chi $ a constante de separa%
+\c{c}\~{a}o $\lambda _{2}$
+
+deve obter 3 equa\c{c}\~{o}es dif. ordinarias com constantes de separa\c{c}%
+\~{a}o $\lambda _{1}$ e $\lambda _{2}$
+
+aplicar as condi\c{c}\~{o}es de contorno: 
+\begin{equation*}
+u\left( \theta _{1},\theta _{2},\chi \right) =u\left( \theta _{1}+2\pi
+,\theta _{2},\chi \right) 
+\end{equation*}%
+periodicidade (que segue da univocacidade) pela vari\'{a}vel $\theta _{1}$
+
+e a condi\c{c}\~{a}o que solu\c{c}\~{a}o deve ser n\~{a}o singular dentro de
+intervalos de varia\c{c}\~{a}o das vari\'{a}veis
+
+;
+
+\section{caso de 4 dim}
+
+;
+
+ser\'{a} o proximo passo
+
+\end{document}

@@ -1,0 +1,325 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /home/victor/Documentos/Material TCC/
+\textclass article
+\begin_preamble
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sat Oct 14 01:01:49 2006}
+%TCIDATA{LastRevised=Saturday, July 24, 2021 16:51:15}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Journal Articles\Standard LaTeX Article">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\textheight=26.5cm
+\textwidth=18cm
+\oddsidemargin=-1.0cm
+\evensidemargin=-1.0cm
+\topmargin=-2.5cm
+\def\baselinestretch{1.6}
+\input{tcilatex}
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Section
+de solução
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Standard
+vamos passar para solução agora. começamos de eq. de Laplace para hiperb de 1 folha em 3 e 4 dim
+\end_layout
+
+\begin_layout Standard
+- leva as suas expressões para Laplacianos na forma seguinte:
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Standard
+o Laplaciano nas coordenadas esferoidais achatadas em 3 dim
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\cos ^{2}\theta
+_{2}\right) }\left[ \frac{1}{\sin \theta _{2}}\frac{\partial }{\partial
+\theta _{2}}\left( \sin \theta _{2}\frac{\partial u}{\partial \theta _{2}}\right) +\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh
+\chi \frac{\partial u}{\partial \chi }\right) \right]  \\
+&&+\frac{1}{a^{2}\sin ^{2}\theta _{2}\cosh ^{2}\chi }\frac{\partial ^{2}u}{\partial \theta _{1}^{2}}\ \left( 3\ \dim \right) 
+\end{eqnarray*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+o Laplaciano nas coordenadas esferoidais achatadas em 4 dim
+\begin_inset Formula \begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\cos ^{2}\theta
+_{3}\right) }\left( \frac{1}{\sin ^{2}\theta _{3}}\frac{\partial }{\partial
+\theta _{3}}\left( \sin ^{2}\theta _{3}\frac{\partial u}{\partial \theta _{3}}\right) +\frac{1}{\cosh ^{2}\chi }\frac{\partial }{\partial \chi }\left(
+\cosh ^{2}\chi \frac{\partial u}{\partial \chi }\right) \right)  \\
+&&+\frac{1}{a^{2}\sin ^{2}\theta _{3}\cosh ^{2}\chi }\nabla _{S^{2}}^{2}u\
+\left( 4\ \dim \right) 
+\end{eqnarray*}
+\end_inset
+
+onde 
+\begin_inset Formula \begin{equation*}
+\nabla _{S^{2}}^{2}u=\left[ \left( \frac{1}{\sin \theta _{2}}\frac{\partial 
+}{\partial \theta _{2}}\left( \sin \theta _{2}\frac{\partial u}{\partial
+\theta _{2}}\right) \right) +\frac{1}{\sin ^{2}\theta _{3}}\frac{\partial
+^{2}u}{\partial \theta _{1}^{2}}\right] 
+\end{equation*}
+\end_inset
+
+é o Laplaciano na esfera 
+\begin_inset Formula $S^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Standard
+separação de variáveis, ainda para 4d
+\end_layout
+
+\begin_layout Standard
+aplicar o troco de variáveis
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{equation*}
+\xi =\cos \theta _{3},\ \zeta =\sinh \chi ,\ \theta _{1},\theta _{2}
+\end{equation*}
+\end_inset
+
+
+\begin_inset Formula \begin{equation*}
+-1\leq \xi \leq 1,\ 0\leq \zeta <\infty ,\ 0\leq \theta _{1}<2\pi ,\ 0\leq
+\theta _{2},\theta _{3}<\pi 
+\end{equation*}
+\end_inset
+
+e separar a parte com 
+\begin_inset Formula $\left( \theta _{1},\theta _{2}\right) $
+\end_inset
+
+ e a parte com 
+\begin_inset Formula $\left( \theta _{3},\chi \right) $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Section
+caso de 3 dim
+\end_layout
+
+\begin_layout Standard
+;
+\begin_inset Formula \begin{eqnarray*}
+x_{3} &=&a\sinh \chi \cos \theta _{2} \\
+x_{2} &=&a\cosh \chi \sin \theta _{2}\cos \theta _{1} \\
+x_{1} &=&a\cosh \chi \sin \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ 0\leq \theta _{2}\leq \pi ,\ 0\leq \theta _{1}<2\pi 
+\end{eqnarray*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\cos ^{2}\theta
+_{2}\right) }\left[ \frac{1}{\sin \theta _{2}}\frac{\partial }{\partial
+\theta _{2}}\left( \sin \theta _{2}\frac{\partial u}{\partial \theta _{2}}\right) +\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh
+\chi \frac{\partial u}{\partial \chi }\right) \right]  \\
+&&+\frac{1}{a^{2}\sin ^{2}\theta _{2}\cosh ^{2}\chi }\frac{\partial ^{2}u}{\partial \theta _{1}^{2}}=0
+\end{eqnarray*}
+\end_inset
+
+aplica separação de variáveis na eq.
+\end_layout
+
+\begin_layout Standard
+1ro separar a variavel 
+\begin_inset Formula $\theta _{1}$
+\end_inset
+
+ com a constante de separação 
+\begin_inset Formula $\lambda _{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+depois separar as variáveis 
+\begin_inset Formula $\theta _{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $\chi $
+\end_inset
+
+ a constante de separação 
+\begin_inset Formula $\lambda _{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+deve obter 3 equações dif. ordinarias com constantes de separação 
+\begin_inset Formula $\lambda _{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $\lambda _{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+aplicar as condições de contorno: 
+\begin_inset Formula \begin{equation*}
+u\left( \theta _{1},\theta _{2},\chi \right) =u\left( \theta _{1}+2\pi
+,\theta _{2},\chi \right) 
+\end{equation*}
+\end_inset
+
+periodicidade (que segue da univocacidade) pela variável 
+\begin_inset Formula $\theta _{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e a condição que solução deve ser não singular dentro de intervalos de variação das variáveis
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Section
+caso de 4 dim
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Standard
+será o proximo passo
+\end_layout
+
+\end_body
+\end_document
