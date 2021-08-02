@@ -190,7 +190,7 @@ Multiplicando ambos os lados por
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}\frac{1}{\Theta_{1}}=-\frac{1}{W}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]=\lambda_{1}
+-\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}\frac{1}{\Theta_{1}}=\frac{1}{W}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]=\lambda_{1}
 \]
 
 \end_inset
@@ -205,7 +205,186 @@ Daí obtêm-se
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}\frac{1}{\Theta_{1}}=\lambda_{1}\Rightarrow\boldsymbol{\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}=\lambda_{1}\Theta_{1}}
+-\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}\frac{1}{\Theta_{1}}=\lambda_{1}\Rightarrow\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}=-\Theta_{1}\lambda_{1}\Rightarrow\boldsymbol{\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}+\Theta_{1}\lambda_{1}=0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Resolvendo essa EDO
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}+\Theta_{1}\lambda_{1}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Caso 
+\begin_inset Formula $\lambda_{1}=0$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A solução para esse caso é
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Theta_{1}(\theta_{1})=A\theta_{1}+B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando a condição de contorno 
+\begin_inset Formula $\Theta_{1}(\theta_{1})=\Theta_{1}(\theta_{1}+2\pi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\theta_{1}+B=A(\theta_{1}+2\pi)+B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Chega-se em 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\theta_{1}=(\theta_{1}+2\pi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essa conclusão é absurda, então conclui-se que 
+\begin_inset Formula $\lambda_{1}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Caso 
+\begin_inset Formula $\lambda_{1}<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}-\Theta_{1}\lambda_{1}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A equação característica é
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D^{2}-\lambda_{1}=0\Rightarrow D^{2}=\lambda_{1}\Rightarrow D=\pm\sqrt{\lambda_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De modo que as raízes são reais e diferentes.
+ Nesse caso a solução geral é
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Theta_{1}(\theta)=Ae^{\sqrt{\lambda_{1}}\theta_{1}}+Be^{-\sqrt{\lambda_{1}}\theta_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando a condição de contorno 
+\begin_inset Formula $\Theta_{1}(\theta_{1})=\Theta_{1}(\theta_{1}+2\pi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Ae^{\sqrt{\lambda_{1}}\theta_{1}}+Be^{-\sqrt{\lambda_{1}}\theta_{1}}=Ae^{\sqrt{\lambda_{1}}(\theta_{1}+2\pi)}+Be^{-\sqrt{\lambda_{1}}(\theta_{1}+2\pi)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Disso extrai-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+e^{\sqrt{\lambda_{1}}\theta_{1}}=e^{\sqrt{\lambda_{1}}(\theta_{1}+2\pi)}\\
+e^{-\sqrt{\lambda_{1}}\theta_{1}}=e^{-\sqrt{\lambda_{1}}(\theta_{1}+2\pi)}
+\end{cases}
 \]
 
 \end_inset
@@ -216,7 +395,151 @@ Daí obtêm-se
 \begin_layout Standard
 \begin_inset Formula 
 \[
--\frac{1}{W}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]=\lambda_{1}
+e^{\sqrt{\lambda_{1}}\theta_{1}}=e^{\sqrt{\lambda_{1}}(\theta_{1}+2\pi)}\Rightarrow e^{\sqrt{\lambda_{1}}\theta_{1}}=e^{\sqrt{\lambda_{1}}\theta_{1}}e^{\sqrt{\lambda_{1}}(\theta_{1}+2\pi)}\Rightarrow e^{2\pi\sqrt{\lambda_{1}}}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Já que 
+\begin_inset Formula $e^{2\pi\sqrt{\lambda_{1}}}=1$
+\end_inset
+
+ também é um absurdo, a única possibilidade restante é 
+\begin_inset Formula $\lambda_{1}>0$
+\end_inset
+
+.
+ Verifica-se a seguir.
+\end_layout
+
+\begin_layout Subsubsection
+Caso 
+\begin_inset Formula $\lambda_{1}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}+\Theta_{1}\lambda_{1}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A equação característica dessa EDO é
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D^{2}+\lambda_{1}=0\Rightarrow D^{2}=-\lambda_{1}\Rightarrow D=\sqrt{-\lambda_{1}}=i\sqrt{\lambda_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De modo que, como as raízes são complexas conjugadas 
+\begin_inset Formula $D=\alpha+i\beta$
+\end_inset
+
+, a solução geral é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Theta_{1}(\theta_{1})=Ae^{i\sqrt{\lambda_{1}}\theta_{1}}+Be^{-i\sqrt{\lambda_{1}}\theta_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando a condição de contorno 
+\begin_inset Formula $\Theta_{1}\left(\theta_{1}\right)=\Theta_{1}\left(\theta_{1}+2\pi\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Ae^{i\sqrt{\lambda_{1}}\theta_{1}}+Be^{-i\sqrt{\lambda_{1}}\theta_{1}}=Ae^{i\sqrt{\lambda_{1}}\left(\theta_{1}+2\pi\right)}+Be^{-i\sqrt{\lambda_{1}}\left(\theta_{1}+2\pi\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Disso extrai-se o seguinte sistema
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+e^{i\sqrt{\lambda_{1}}\theta_{1}}=e^{i\sqrt{\lambda_{1}}\left(\theta_{1}+2\pi\right)}\\
+e^{-i\sqrt{\lambda}_{1}\theta_{1}}=e^{-i\sqrt{\lambda_{1}}\left(\theta_{1}+2\pi\right)}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{i\sqrt{\lambda_{1}}\theta_{1}}=e^{i\sqrt{\lambda_{1}}\left(\theta_{1}+2\pi\right)}\Rightarrow e^{i\sqrt{\lambda_{1}}\theta_{1}}=e^{i\sqrt{\lambda_{1}}\theta_{1}}e^{i\sqrt{\lambda_{1}}2\pi}\Rightarrow e^{i\sqrt{\lambda_{1}}2\pi}=1\Rightarrow cos\left(\sqrt{\lambda_{1}}2\pi\right)+i\,sin\left(\sqrt{\lambda_{1}}2\pi\right)=1\Rightarrow\sqrt{\lambda_{1}}=m\Rightarrow\boldsymbol{\lambda_{1}=m^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Então temos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{\Theta_{1}(\theta_{1})=Ae^{im\theta_{1}}+Be^{-im\theta_{1}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Continuando na outra equação
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{W}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]=\lambda_{1}
 \]
 
 \end_inset
@@ -239,7 +562,7 @@ W(\theta_{2},\chi)=\Theta_{2}(\theta_{2})X(\chi)
 \begin_layout Standard
 \begin_inset Formula 
 \[
--\frac{1}{\Theta_{2}X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[Xcot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+X\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}+\Theta_{2}tanh(\chi)\frac{\partial X}{\partial\chi}+\Theta_{2}\frac{\partial^{2}X}{\partial\chi^{2}}\right]=\lambda_{1}
+\frac{1}{\Theta_{2}X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[Xcot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+X\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}+\Theta_{2}tanh(\chi)\frac{\partial X}{\partial\chi}+\Theta_{2}\frac{\partial^{2}X}{\partial\chi^{2}}\right]=\lambda_{1}
 \]
 
 \end_inset
@@ -250,7 +573,7 @@ W(\theta_{2},\chi)=\Theta_{2}(\theta_{2})X(\chi)
 \begin_layout Standard
 \begin_inset Formula 
 \[
--\frac{1}{\Theta_{2}X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[X\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\Theta_{2}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=\lambda_{1}
+\frac{1}{\Theta_{2}X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[X\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\Theta_{2}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=\lambda_{1}
 \]
 
 \end_inset
@@ -261,7 +584,7 @@ W(\theta_{2},\chi)=\Theta_{2}(\theta_{2})X(\chi)
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{1}{\Theta_{2}}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=-\lambda_{1}
+\frac{1}{\Theta_{2}}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}
 \]
 
 \end_inset
@@ -272,7 +595,7 @@ W(\theta_{2},\chi)=\Theta_{2}(\theta_{2})X(\chi)
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=-\lambda_{1}
+\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=\lambda_{1}
 \]
 
 \end_inset
@@ -283,7 +606,488 @@ W(\theta_{2},\chi)=\Theta_{2}(\theta_{2})X(\chi)
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\left[\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=-\lambda_{1}\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}{\sin\theta_{2}\cosh^{2}\chi}
+\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}{\sin\theta_{2}\cosh^{2}\chi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizando
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}{\sin^{2}\theta_{2}\cosh^{2}\chi}=\frac{1}{\sin^{2}\theta_{2}}+\frac{1}{\cosh^{2}\chi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}\left(\frac{1}{\sin^{2}\theta_{2}}+\frac{1}{\cosh^{2}\chi}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\frac{\lambda_{1}}{\sin^{2}\theta_{2}}+\frac{\lambda_{1}}{\cosh^{2}\chi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}-\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)+\frac{\lambda_{1}}{\cosh^{2}\chi}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}=\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)-\frac{\lambda_{1}}{\cosh^{2}\chi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nota-se que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)=\left(\frac{cos(\theta_{2})}{sin(\theta_{2})}\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)=\frac{1}{sin(\theta_{2})}\left(cos(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\sin\theta_{2}\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)=\frac{1}{sin(\theta_{2})}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial\Theta_{2}}{\partial\theta_{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\left(\frac{sinh\left(\chi\right)}{cosh\left(\chi\right)}\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\frac{1}{cosh\left(\chi\right)}\left(sinh\left(\chi\right)\frac{\partial X}{\partial\chi}+cosh\left(\chi\right)\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\frac{1}{\cosh\chi}\frac{\partial}{\partial\chi}\left(\cosh\chi\frac{\partial X}{\partial\chi}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Então
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{\Theta_{2}sin(\theta_{2})}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial\Theta_{2}}{\partial\theta_{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}=\frac{1}{X\cosh\chi}\frac{\partial}{\partial\chi}\left(\cosh\chi\frac{\partial X}{\partial\chi}\right)-\frac{\lambda_{1}}{\cosh^{2}\chi}=\lambda_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{\Theta_{2}sin(\theta_{2})}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial\Theta_{2}}{\partial\theta_{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}=\lambda_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{X\cosh\chi}\frac{\partial}{\partial\chi}\left(\cosh\chi\frac{\partial X}{\partial\chi}\right)-\frac{\lambda_{1}}{\cosh^{2}\chi}=\lambda_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pode-se escrever
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta}\left(\sin\theta_{2}\frac{\partial\Theta_{2}}{\partial\theta_{2}}\right)+\left(\lambda_{2}-\frac{\lambda_{1}}{\sin^{2}\theta_{2}}\right)\Theta_{2}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\cosh\chi}\frac{d}{d\chi}\left(\cosh\chi\frac{dX}{d\chi}\right)-\left(\lambda_{2}+\frac{\lambda_{1}}{\cosh^{2}\chi}\right)X=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Resolvendo para 
+\begin_inset Formula $\Theta_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\left(\lambda_{2}-\frac{m^{2}}{\sin^{2}\theta_{2}}\right)\Theta_{2}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series medium
+Determina-se 
+\begin_inset Formula $\lambda_{2}=n(n+1),\,n\in\mathbb{Z}_{+}$
+\end_inset
+
+ de modo que tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\left(n(n+1)-\frac{m^{2}}{\sin^{2}\theta_{2}}\right)\Theta_{2}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fazendo 
+\begin_inset Formula $x=cos\theta_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+sin^{2}(\theta_{2})=1-cos^{2}(\theta_{2})=1-x^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\Theta_{2}}{d\theta_{2}}=\frac{d\Theta_{2}}{dx}\frac{dx}{d\theta_{2}}=-sin(\theta_{2})\frac{d\Theta_{2}}{dx}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)=\frac{d}{d\theta_{2}}\left(-sin^{2}(\theta_{2})\frac{d\Theta_{2}}{dx}\right)=-2cos\theta_{2}sin\theta_{2}\frac{d\Theta_{2}}{dx}-sin^{2}(\theta_{2})\frac{d}{d\theta_{2}}\frac{d\Theta_{2}}{dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-2cos\theta_{2}sin\theta_{2}\frac{d\Theta_{2}}{dx}-sin^{2}(\theta_{2})\frac{d}{dx}\frac{d\Theta_{2}}{d\theta_{2}}=-2cos\theta_{2}sin\theta_{2}\frac{d\Theta_{2}}{dx}+sin^{3}(\theta_{2})\frac{d^{2}\Theta_{2}}{dx^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)\Rightarrow\frac{1}{sin(\theta_{2})}\left(-2cos\theta_{2}sin\theta_{2}\frac{d\Theta_{2}}{dx}+sin^{3}(\theta_{2})\frac{d^{2}\Theta_{2}}{dx^{2}}\right)=-2cos\theta_{2}\frac{d\Theta_{2}}{dx}+sin^{2}(\theta_{2})\frac{d^{2}\Theta_{2}}{dx^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\left(n(n+1)-\frac{m^{2}}{\sin^{2}\theta_{2}}\right)\Theta_{2}=0\Rightarrow-2x\frac{d\Theta_{2}}{dx}+\left(1-x^{2}\right)\frac{d^{2}\Theta_{2}}{dx^{2}}+\left(n(n+1)-\frac{m^{2}}{\left(1-x^{2}\right)}\right)\Theta_{2}=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(1-x^{2}\right)\frac{d^{2}\Theta_{2}}{dx^{2}}-2x\frac{d\Theta_{2}}{dx}+\left(n(n+1)-\frac{m^{2}}{\left(1-x^{2}\right)}\right)\Theta_{2}=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Essa é a 
+\series bold
+Equação de Legendre Generalizada
+\series default
+ e suas soluções, para 
+\begin_inset Formula $m,n\in\mathbb{Z}$
+\end_inset
+
+, são dadas em termos de Polinômios Associados de Legendre.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Theta_{2,n,m}(x)=P_{n}^{m}(x)
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quando 
+\begin_inset Formula $m=0$
+\end_inset
+
+ tem-se o caso especial em que a solução reduz-se a um Polinômio de Legendre
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Theta_{2,n,0}(x)=P_{n}^{0}(x)=P_{n}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Olhando para 
+\begin_inset Formula $\chi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\cosh\chi}\frac{d}{d\chi}\left(\cosh\chi\frac{dX}{d\chi}\right)-\left(\lambda_{2}+\frac{\lambda_{1}}{\cosh^{2}\chi}\right)X=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fazendo 
+\begin_inset Formula $\zeta=\sinh\chi$
+\end_inset
+
+ tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+cosh^{2}(\chi)=1-sinh^{2}(\chi)=1-\zeta^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dX}{d\chi}=\frac{dX}{d\zeta}\frac{d\zeta}{d\chi}=cosh\chi\frac{dX}{d\zeta}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d}{d\chi}\left(\cosh\chi\frac{dX}{d\chi}\right)=\frac{d}{d\chi}\left(\cosh^{2}\chi\frac{dX}{d\zeta}\right)=2cosh\chi sinh\chi\frac{dX}{d\zeta}+\cosh^{2}\chi\frac{d}{d\chi}\frac{dX}{d\zeta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=2cosh\chi sinh\chi\frac{dX}{d\zeta}+\cosh^{2}\chi\frac{d}{d\zeta}\frac{dX}{d\chi}=2cosh\chi sinh\chi\frac{dX}{d\zeta}+\cosh^{3}\chi\frac{d^{2}X}{d\zeta^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\cosh\chi}\frac{d}{d\chi}\left(\cosh\chi\frac{dX}{d\chi}\right)=\frac{1}{\cosh\chi}\left(2cosh\chi sinh\chi\frac{dX}{d\zeta}+\cosh^{3}\chi\frac{d^{2}X}{d\zeta^{2}}\right)=2sinh\chi\frac{dX}{d\zeta}+\cosh^{2}\chi\frac{d^{2}X}{d\zeta^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Então, considerando 
+\begin_inset Formula $\lambda_{1}=m^{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $\lambda_{2}=n(n+1)$
+\end_inset
+
+, chega-se em:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(1-\zeta^{2}\right)\frac{d^{2}X}{d\zeta^{2}}+2\zeta\frac{dX}{d\zeta}-\left(n(n+1)+\frac{m^{2}}{\left(1-\zeta^{2}\right)}\right)X=0
 \]
 
 \end_inset

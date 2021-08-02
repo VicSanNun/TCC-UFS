@@ -1,0 +1,190 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sat Oct 14 01:01:49 2006}
+%TCIDATA{LastRevised=Friday, July 30, 2021 13:23:09}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Journal Articles\Standard LaTeX Article">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\textheight=26.5cm
+\textwidth=18cm
+\oddsidemargin=-1.0cm
+\evensidemargin=-1.0cm
+\topmargin=-2.5cm
+\def\baselinestretch{1.6}
+\input{tcilatex}
+\begin{document}
+
+
+\section{caso de 3 dim}
+
+;%
+\begin{eqnarray*}
+x_{3} &=&a\sinh \chi \cos \theta _{2} \\
+x_{2} &=&a\cosh \chi \sin \theta _{2}\cos \theta _{1} \\
+x_{1} &=&a\cosh \chi \sin \theta _{2}\sin \theta _{1} \\
+0 &\leq &\chi <\infty ,\ 0\leq \theta _{2}\leq \pi ,\ 0\leq \theta _{1}<2\pi
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\nabla ^{2}u &=&\frac{1}{a^{2}\left( \sinh ^{2}\chi +\cos ^{2}\theta
+_{2}\right) }\left[ \frac{1}{\sin \theta _{2}}\frac{\partial }{\partial
+\theta _{2}}\left( \sin \theta _{2}\frac{\partial u}{\partial \theta _{2}}%
+\right) +\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh
+\chi \frac{\partial u}{\partial \chi }\right) \right] \\
+&&+\frac{1}{a^{2}\sin ^{2}\theta _{2}\cosh ^{2}\chi }\frac{\partial ^{2}u}{%
+\partial \theta _{1}^{2}}=0
+\end{eqnarray*}%
+aplica separa\c{c}\~{a}o de vari\'{a}veis na eq.
+
+1ro separar a variavel $\theta _{1}$ com a constante de separa\c{c}\~{a}o $%
+\lambda _{1}$
+
+depois separar as vari\'{a}veis $\theta _{2}$ e $\chi $ a constante de separa%
+\c{c}\~{a}o $\lambda _{2}$
+
+deve obter 3 equa\c{c}\~{o}es dif. ordinarias com constantes de separa\c{c}%
+\~{a}o $\lambda _{1}$ e $\lambda _{2}$
+
+aplicar as condi\c{c}\~{o}es de contorno: 
+\begin{equation*}
+u\left( \theta _{1},\theta _{2},\chi \right) =u\left( \theta _{1}+2\pi
+,\theta _{2},\chi \right)
+\end{equation*}%
+periodicidade (que segue da univocacidade) pela vari\'{a}vel $\theta _{1}$
+
+e a condi\c{c}\~{a}o que solu\c{c}\~{a}o deve ser n\~{a}o singular dentro de
+intervalos de varia\c{c}\~{a}o das vari\'{a}veis
+
+;%
+\begin{equation*}
+u(\theta _{1},\theta _{2},\chi )=\Theta _{1}(\theta _{1})W(\theta _{2},\chi )
+\end{equation*}%
+melhor deixar na forma:%
+\begin{equation*}
+-\frac{\partial ^{2}\Theta _{1}}{\partial \theta _{1}^{2}}\frac{1}{\Theta
+_{1}}=\frac{1}{W}\frac{\sin ^{2}\theta _{2}\cosh ^{2}\chi }{\left( \sinh
+^{2}\chi +\cos ^{2}\theta _{2}\right) }\left[ \frac{1}{\sin \theta _{2}}%
+\frac{\partial }{\partial \theta _{2}}\left( \sin \theta _{2}\frac{\partial W%
+}{\partial \theta _{2}}\right) +\frac{1}{\cosh \chi }\frac{\partial }{%
+\partial \chi }\left( \cosh \chi \frac{\partial W}{\partial \chi }\right) %
+\right] =\lambda _{1}
+\end{equation*}%
+\begin{equation*}
+-\frac{\partial ^{2}\Theta _{1}}{\partial \theta _{1}^{2}}\frac{1}{\Theta
+_{1}}=\lambda _{1}\Rightarrow \frac{d^{2}\Theta _{1}}{d\theta _{1}^{2}}%
++\lambda _{1}\Theta _{1}=0
+\end{equation*}%
+a 1ra eq dif ordinaria com condi\c{c}\~{a}o de contorno (cc) \'{e}%
+\begin{equation*}
+\frac{d^{2}\Theta _{1}}{d\theta _{1}^{2}}+\lambda _{1}\Theta _{1}=0,\ \Theta
+_{1}\left( \theta _{1}\right) =\Theta _{1}\left( \theta _{1}+2\pi \right)
+\end{equation*}%
+resolve a eq (para vc escrever) obtem que 
+\begin{equation*}
+\lambda _{1}=m^{2},\ m\in \mathbb{Z}
+\end{equation*}%
+\begin{equation*}
+\Theta _{1}\left( \theta _{1}\right) =Ae^{im\theta _{1}}+Be^{-im\theta _{1}}
+\end{equation*}%
+pr\'{o}ximo passo%
+\begin{equation*}
+W(\theta _{2},\chi )=\Theta _{2}(\theta _{2})X(\chi )
+\end{equation*}%
+\begin{equation*}
+\left[ \frac{1}{\sin \theta _{2}}\frac{\partial }{\partial \theta _{2}}%
+\left( \sin \theta _{2}\frac{\partial W}{\partial \theta _{2}}\right) +\frac{%
+1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh \chi \frac{%
+\partial W}{\partial \chi }\right) \right] =\lambda _{1}W\frac{\left( \sinh
+^{2}\chi +\cos ^{2}\theta _{2}\right) }{\sin ^{2}\theta _{2}\cosh ^{2}\chi }
+\end{equation*}%
+aqui 
+\begin{equation*}
+\frac{\left( \sinh ^{2}\chi +\cos ^{2}\theta _{2}\right) }{\sin ^{2}\theta
+_{2}\cosh ^{2}\chi }=\frac{1}{\sin ^{2}\theta _{2}}+\frac{1}{\cosh ^{2}\chi }
+\end{equation*}%
+p%
+\begin{equation*}
+\left[ X\frac{1}{\sin \theta _{2}}\frac{\partial }{\partial \theta _{2}}%
+\left( \sin \theta _{2}\frac{\partial \Theta _{2}}{\partial \theta _{2}}%
+\right) +\Theta _{2}\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }%
+\left( \cosh \chi \frac{\partial X}{\partial \chi }\right) \right] =\lambda
+_{1}\Theta _{2}X\left( \frac{1}{\sin ^{2}\theta _{2}}+\frac{1}{\cosh
+^{2}\chi }\right)
+\end{equation*}%
+\begin{equation*}
+\left[ \frac{1}{\Theta _{2}}\frac{1}{\sin \theta _{2}}\frac{\partial }{%
+\partial \theta _{2}}\left( \sin \theta _{2}\frac{\partial \Theta _{2}}{%
+\partial \theta _{2}}\right) +\frac{1}{X}\frac{1}{\cosh \chi }\frac{\partial 
+}{\partial \chi }\left( \cosh \chi \frac{\partial X}{\partial \chi }\right) %
+\right] =\lambda _{1}\left( \frac{1}{\sin ^{2}\theta _{2}}+\frac{1}{\cosh
+^{2}\chi }\right)
+\end{equation*}%
+\begin{equation*}
+-\frac{1}{\Theta _{2}}\frac{1}{\sin \theta _{2}}\frac{\partial }{\partial
+\theta _{2}}\left( \sin \theta _{2}\frac{\partial \Theta _{2}}{\partial
+\theta _{2}}\right) +\lambda _{1}\frac{1}{\sin ^{2}\theta _{2}}=\frac{1}{X}%
+\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh \chi \frac{%
+\partial X}{\partial \chi }\right) -\lambda _{1}\frac{1}{\cosh ^{2}\chi }%
+=\lambda _{2}
+\end{equation*}%
+portanto%
+\begin{equation*}
+-\frac{1}{\Theta _{2}}\frac{1}{\sin \theta _{2}}\frac{\partial }{\partial
+\theta _{2}}\left( \sin \theta _{2}\frac{\partial \Theta _{2}}{\partial
+\theta _{2}}\right) +\lambda _{1}\frac{1}{\sin ^{2}\theta _{2}}=\lambda _{2}
+\end{equation*}%
+\begin{equation*}
+\frac{1}{X}\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh
+\chi \frac{\partial X}{\partial \chi }\right) -\lambda _{1}\frac{1}{\cosh
+^{2}\chi }=\lambda _{2}
+\end{equation*}%
+ou%
+\begin{equation*}
+\frac{1}{\sin \theta _{2}}\frac{\partial }{\partial \theta _{2}}\left( \sin
+\theta _{2}\frac{\partial \Theta _{2}}{\partial \theta _{2}}\right) +\left(
+\lambda _{2}-\lambda _{1}\frac{1}{\sin ^{2}\theta _{2}}\right) \Theta _{2}=0
+\end{equation*}%
+\begin{equation*}
+\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh \chi \frac{%
+\partial X}{\partial \chi }\right) -\left( \lambda _{2}+\lambda _{1}\frac{1}{%
+\cosh ^{2}\chi }\right) X=0
+\end{equation*}%
+podemos aplicar $\lambda _{1}=m^{2}$%
+\begin{equation*}
+\frac{1}{\sin \theta _{2}}\frac{\partial }{\partial \theta _{2}}\left( \sin
+\theta _{2}\frac{\partial \Theta _{2}}{\partial \theta _{2}}\right) +\left(
+\lambda _{2}-\frac{m^{2}}{\sin ^{2}\theta _{2}}\right) \Theta _{2}=0
+\end{equation*}%
+\begin{equation*}
+\frac{1}{\cosh \chi }\frac{\partial }{\partial \chi }\left( \cosh \chi \frac{%
+\partial X}{\partial \chi }\right) -\left( \lambda _{2}+\frac{m^{2}}{\cosh
+^{2}\chi }\right) X=0
+\end{equation*}%
+Na eq para $\Theta _{2}$ vc reconhece a eq de Legendre. Solu\c{c}\~{o}es n%
+\~{a}o singulares expressas em termos de polinomios de Legendre. E
+determinamos $\lambda _{2}=n\left( n+1\right) ,$ $n\in \mathbb{N}%
+_{0}=\left\{ 0,1,2,3,...\right\} .$ Escreva as solu\c{c}\~{o}es!
+
+$\frac{{}}{{}}$
+
+Na eq para $X$ aplica a vari\'{a}vel 
+\begin{equation*}
+\zeta =\sinh \chi ,\ 0\leq \zeta <\infty 
+\end{equation*}%
+e chega a eq na var $\zeta $ : escreva a eq !%
+\begin{equation*}
+\end{equation*}
+
+\end{document}
