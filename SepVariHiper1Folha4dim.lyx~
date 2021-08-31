@@ -1,0 +1,806 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla^{2}u=\frac{1}{a^{2}\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}\left(\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial u}{\partial\theta_{3}}\right)+\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial u}{\partial\chi}\right)\right)+\frac{1}{a^{2}\sin^{2}\theta_{3}\cosh^{2}\chi}\nabla_{S^{2}}^{2}u=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tal que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla_{S^{2}}^{2}u=\left[\left(\frac{1}{\sin\theta_{2}}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial u}{\partial\theta_{2}}\right)\right)+\frac{1}{\sin^{2}\theta_{2}}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+É o Laplaciano na esfera 
+\begin_inset Formula $S^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para realizar a separação de variáveis façamos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(\chi,\theta_{1},\theta_{2},\theta_{3})=Y(\theta_{1},\theta_{2})W(\chi,\theta_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando na Equação
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla^{2}u=\frac{Y}{a^{2}\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}\left(\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial W}{\partial\theta_{3}}\right)+\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial W}{\partial\chi}\right)\right)+\frac{W}{a^{2}\sin^{2}\theta_{3}\cosh^{2}\chi}\left(\nabla_{S^{2}}^{2}Y\right)=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Multiplicando os dois lados por 
+\begin_inset Formula $\frac{a^{2}\sin^{2}\theta_{3}\cosh^{2}\chi}{WY}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\sin^{2}\theta_{3}\cosh^{2}\chi}{W\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}\left(\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial W}{\partial\theta_{3}}\right)+\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial W}{\partial\chi}\right)\right)+\frac{1}{Y}\left(\nabla_{S^{2}}^{2}Y\right)=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Então, tem-se
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\sin^{2}\theta_{3}\cosh^{2}\chi}{W\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}\left(\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial W}{\partial\theta_{3}}\right)+\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial W}{\partial\chi}\right)\right)=-\frac{1}{Y}\left(\nabla_{S^{2}}^{2}Y\right)=\lambda_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+De modo que chega-se em duas EDPs
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\sin^{2}\theta_{3}\cosh^{2}\chi}{W\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}\left(\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial W}{\partial\theta_{3}}\right)+\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial W}{\partial\chi}\right)\right)=\lambda_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla_{S^{2}}^{2}Y=-Y\lambda_{1}
+\]
+
+\end_inset
+
+Assumindo 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Y(\theta_{1},\theta_{2})=\Theta_{1}(\theta_{1})\Theta_{2}(\theta_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+W(\chi,\theta_{3})=X(\chi)\Theta_{3}(\theta_{3})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Tem-se
+\end_layout
+
+\begin_layout Section
+Parte Esférica
+\end_layout
+
+\begin_layout Standard
+A equação 
+\begin_inset Formula $\nabla_{S^{2}}^{2}Y=-Y\lambda_{1}$
+\end_inset
+
+ fica da seguinte forma
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\nabla_{S^{2}}^{2}Y=\left[\left(\frac{1}{\sin\theta_{2}}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial Y}{\partial\theta_{2}}\right)\right)+\frac{1}{\sin^{2}\theta_{2}}\frac{\partial^{2}Y}{\partial\theta_{1}^{2}}\right]=-Y\lambda_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+A solução dessa equação é expressa em termos de harmônicos esféricos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Y(\theta_{1},\theta_{2})=\Theta_{1}(\theta_{1})\Theta_{2}(\theta_{2})=Y_{n,\,m}(\theta_{1},\,\theta_{2})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Para determinarmos 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+vamos desenvolver a expressão
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\sin\theta_{2}}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial Y}{\partial\theta_{2}}\right)+\frac{1}{\sin^{2}\theta_{2}}\frac{\partial^{2}Y}{\partial\theta_{1}^{2}}+Y\lambda_{1}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Y=\Theta_{1}\Theta_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Então tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\Theta_{1}}{\sin\theta_{2}}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\frac{\Theta_{2}}{\sin^{2}\theta_{2}}\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}+Y\lambda_{1}=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Multiplicando por 
+\begin_inset Formula $\frac{\sin^{2}\theta_{2}}{\Theta_{1}\Theta_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\sin\theta_{2}}{\Theta_{2}}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\sin^{2}\theta_{2}\lambda_{1}+\frac{1}{\Theta_{1}}\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Então podemos separar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\sin\theta_{2}}{\Theta_{2}}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\sin^{2}\theta_{2}\lambda_{1}=-\frac{1}{\Theta_{1}}\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}=\lambda_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Desse modo chega-se em 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}\Theta_{1}}{d\theta_{1}^{2}}+\Theta_{1}\lambda_{2}=0\Rightarrow\Theta_{1,m}(\theta_{1})=Ae^{im\theta_{1}}+Be^{-im\theta_{1}},\boldsymbol{\,\lambda_{2}=m^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\sin\theta_{2}}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\left(\lambda_{1}-\frac{m^{2}}{\sin^{2}\theta_{2}}\right)\Theta_{2}=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Essa expressão é conhecida e dela obtemos 
+\begin_inset Formula $\lambda_{1}=n(n+1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Analisando a outra EDP
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\sin^{2}\theta_{3}\cosh^{2}\chi}{W\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}\left(\frac{X}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial\Theta_{3}}{\partial\theta_{3}}\right)+\frac{\Theta_{3}}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial X}{\partial\chi}\right)\right)=\lambda_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Multiplica-se os dois lados por 
+\begin_inset Formula $\frac{W\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}{X\Theta_{3}\sin^{2}\theta_{3}\cosh^{2}\chi}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{X\Theta_{3}}\left(\frac{X}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial\Theta_{3}}{\partial\theta_{3}}\right)+\frac{\Theta_{3}}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial X}{\partial\chi}\right)\right)=\lambda_{1}\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}{\sin^{2}\theta_{3}\cosh^{2}\chi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\Theta_{3}}\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial\Theta_{3}}{\partial\theta_{3}}\right)+\frac{1}{X}\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial X}{\partial\chi}\right)=\lambda_{1}\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}{\sin^{2}\theta_{3}\cosh^{2}\chi}
+\]
+
+\end_inset
+
+Veja que
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{3}\right)}{\sin^{2}\theta_{3}\cosh^{2}\chi}=\frac{\sinh^{2}\chi}{\sin^{2}\theta_{3}\cosh^{2}\chi}+\frac{\cos^{2}\theta_{3}}{\sin^{2}\theta_{3}\cosh^{2}\chi}=\frac{\cosh^{2}\chi-1}{\sin^{2}\theta_{3}\cosh^{2}\chi}+\frac{1-\sin^{2}\theta_{3}}{\sin^{2}\theta_{3}\cosh^{2}\chi}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{\sin^{2}\theta_{3}}-\frac{1}{\sin^{2}\theta_{3}\cosh^{2}\chi}+\frac{1}{\sin^{2}\theta_{3}\cosh^{2}\chi}-\frac{1}{\cosh^{2}\chi}=\frac{1}{\sin^{2}\theta_{3}}-\frac{1}{\cosh^{2}\chi}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Então a equação fica
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\Theta_{3}}\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial\Theta_{3}}{\partial\theta_{3}}\right)+\frac{1}{X}\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial X}{\partial\chi}\right)=\lambda_{1}\frac{1}{\sin^{2}\theta_{3}}-\lambda_{1}\frac{1}{\cosh^{2}\chi}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\Theta_{3}}\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial\Theta_{3}}{\partial\theta_{3}}\right)-\lambda_{1}\frac{1}{\sin^{2}\theta_{3}}+\frac{1}{X}\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial X}{\partial\chi}\right)+\lambda_{1}\frac{1}{\cosh^{2}\chi}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\Theta_{3}}\frac{1}{\sin^{2}\theta_{3}}\frac{\partial}{\partial\theta_{3}}\left(\sin^{2}\theta_{3}\frac{\partial\Theta_{3}}{\partial\theta_{3}}\right)-\lambda_{1}\frac{1}{\sin^{2}\theta_{3}}=-\frac{1}{X}\frac{1}{\cosh^{2}\chi}\frac{\partial}{\partial\chi}\left(\cosh^{2}\chi\frac{\partial X}{\partial\chi}\right)-\lambda_{1}\frac{1}{\cosh^{2}\chi}=\lambda_{2}
+\]
+
+\end_inset
+
+Fica-se com
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{1}{\Theta_{3}}\frac{1}{\sin^{2}\theta_{3}}\frac{d}{d\theta_{3}}\left(\sin^{2}\theta_{3}\frac{d\Theta_{3}}{d\theta_{3}}\right)+\lambda_{1}\frac{1}{\sin^{2}\theta_{3}}=-\lambda_{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{1}{X}\frac{1}{\cosh^{2}\chi}\frac{d}{d\chi}\left(\cosh^{2}\chi\frac{dX}{d\chi}\right)-\lambda_{1}\frac{1}{\cosh^{2}\chi}=\lambda_{3}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Ou, de outra forma, tem-se
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{\Theta_{3}}\frac{1}{\sin^{2}\theta_{3}}\frac{d}{d\theta_{3}}\left(\sin^{2}\theta_{3}\frac{d\Theta_{3}}{d\theta_{3}}\right)+\left(\frac{\lambda_{1}}{\sin^{2}\theta_{3}}+\lambda_{3}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{1}{X}\frac{1}{\cosh^{2}\chi}\frac{d}{d\chi}\left(\cosh^{2}\chi\frac{dX}{d\chi}\right)-\left(\lambda_{3}+\frac{\lambda_{1}}{\cosh^{2}\chi}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Equação para 
+\begin_inset Formula $\theta_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\Theta_{3}}\frac{1}{\sin^{2}\theta_{3}}\frac{d}{d\theta_{3}}\left(\sin^{2}\theta_{3}\frac{d\Theta_{3}}{d\theta_{3}}\right)-\left(\lambda_{1}\frac{1}{\sin^{2}\theta_{3}}+\lambda_{3}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando troca de variáveis 
+\begin_inset Formula $\xi=\cos\theta_{3}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+sin^{2}(\theta_{3})=1-cos^{2}(\theta_{3})=1-\xi{}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sin^{2}\theta_{3}\frac{d\Theta_{3}}{d\theta_{3}}=\sin^{2}\theta_{3}\frac{d\Theta_{3}}{d\xi}\frac{d\xi}{d\theta_{3}}=-\sin^{3}(\theta_{3})\frac{d\Theta_{3}}{d\xi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d}{d\theta_{3}}\left(\sin^{2}\theta_{3}\frac{d\Theta_{3}}{d\theta_{3}}\right)=-\frac{d}{d\theta_{3}}\left(\sin^{3}(\theta_{3})\frac{d\Theta_{3}}{d\xi}\right)=-\left(3\cos(\theta_{3})\sin^{2}(\theta_{3})\frac{d\Theta_{3}}{d\xi}+\sin^{3}(\theta_{3})\frac{d}{d\theta_{3}}\frac{d\Theta_{3}}{d\xi}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\left(3\cos(\theta_{3})\sin^{2}(\theta_{3})\frac{d\Theta_{3}}{d\xi}+\sin^{3}(\theta_{3})\frac{d}{d\xi}\frac{d\Theta_{3}}{d\theta_{3}}\right)=-\left(3\cos(\theta_{3})\sin^{2}(\theta_{3})\frac{d\Theta_{3}}{d\xi}-\sin^{4}(\theta_{3})\frac{d^{2}\Theta_{3}}{d\xi^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\sin^{2}(\theta_{3})\left(3\cos(\theta_{3})\frac{d\Theta_{3}}{d\xi}-\sin^{2}(\theta_{3})\frac{d^{2}\Theta_{3}}{d\xi^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A equação fica
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-\frac{1}{\Theta_{3}}\left(3\cos(\theta_{3})\frac{d\Theta_{3}}{d\xi}-\sin^{2}(\theta_{3})\frac{d^{2}\Theta_{3}}{d\xi^{2}}\right)-\left(\lambda_{1}\frac{1}{\sin^{2}\theta_{3}}+\lambda_{3}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{\Theta_{3}}\left(3\xi\frac{d\Theta_{3}}{d\xi}-\left(1-\xi{}^{2}\right)\frac{d^{2}\Theta_{3}}{d\xi^{2}}\right)+\left(\frac{n(n+1)}{\left(1-\xi{}^{2}\right)}+\lambda_{3}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Equação para 
+\begin_inset Formula $\chi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{X}\frac{1}{\cosh^{2}\chi}\frac{d}{d\chi}\left(\cosh^{2}\chi\frac{dX}{d\chi}\right)+\left(\lambda_{3}+\frac{\lambda_{1}}{\cosh^{2}\chi}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando 
+\begin_inset Formula $\zeta=\sinh\chi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cosh^{2}\chi=1+\sinh\chi=1+\zeta^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cosh^{2}\chi\frac{dX}{d\chi}=\cosh^{2}\chi\frac{dX}{d\zeta}\frac{d\zeta}{d\chi}=\cosh^{3}\chi\frac{dX}{d\zeta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d}{d\chi}\left(\cosh^{2}\chi\frac{dX}{d\chi}\right)=\frac{d}{d\chi}\left(\cosh^{3}\chi\frac{dX}{d\zeta}\right)=3\cosh^{2}\chi\sinh\chi\frac{dX}{d\zeta}+\cosh^{3}\chi\frac{d}{d\chi}\frac{dX}{d\zeta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=3\cosh^{2}\chi\sinh\chi\frac{dX}{d\zeta}+\cosh^{3}\chi\frac{d}{d\zeta}\frac{dX}{d\chi}=3\cosh^{2}\chi\sinh\chi\frac{dX}{d\zeta}+\cosh^{4}\chi\frac{d^{2}X}{d\zeta^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\cosh^{2}\chi\left(3\sinh\chi\frac{dX}{d\zeta}+\cosh^{2}\chi\frac{d^{2}X}{d\zeta^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A equação fica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{X}\left(3\zeta\frac{dX}{d\zeta}+\left(1+\zeta^{2}\right)\frac{d^{2}X}{d\zeta^{2}}\right)+\left(\lambda_{3}+\frac{\lambda_{1}}{\left(1+\zeta^{2}\right)}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agora aplicando 
+\begin_inset Formula $\alpha=i\zeta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\alpha^{2}=\zeta^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dX}{d\zeta}=\frac{dX}{d\alpha}\frac{d\alpha}{d\zeta}=i\frac{dX}{d\alpha}\Rightarrow3\zeta\frac{dX}{d\zeta}=3\zeta i\frac{dX}{d\alpha}=3\alpha\frac{dX}{d\alpha}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}X}{d\zeta^{2}}=\frac{d}{d\zeta}\frac{dX}{d\zeta}=i\frac{d}{d\zeta}\frac{dX}{d\alpha}=i\frac{d}{d\alpha}\frac{dX}{d\zeta}=-\frac{d}{d\alpha}\frac{dX}{d\alpha}=-\frac{d^{2}X}{d\alpha^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Então, tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{X}\left(3\alpha\frac{dX}{d\alpha}-\left(1-\alpha^{2}\right)\frac{d^{2}X}{d\alpha^{2}}\right)+\left(\lambda_{3}+\frac{n(n+1)}{\left(1-\alpha^{2}\right)}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

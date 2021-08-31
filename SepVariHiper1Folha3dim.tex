@@ -46,11 +46,11 @@ Aplicando na Equação de Laplace
 Multiplicando ambos os lados por $\frac{a^{2}\sin^{2}\theta_{2}\cosh^{2}\chi}{\Theta_{1}W}$ 
 
 \[
-\frac{1}{W}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]+\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}\frac{1}{\Theta_{1}}=0
+\frac{1}{W}\frac{\sin^{2}\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]+\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}\frac{1}{\Theta_{1}}=0
 \]
 
 \[
--\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}\frac{1}{\Theta_{1}}=\frac{1}{W}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]=\lambda_{1}
+-\frac{\partial^{2}\Theta_{1}}{\partial\theta_{1}^{2}}\frac{1}{\Theta_{1}}=\frac{1}{W}\frac{\sin^{2}\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]=\lambda_{1}
 \]
 
 Daí obtêm-se
@@ -175,14 +175,14 @@ e^{i\sqrt{\lambda_{1}}\theta_{1}}=e^{i\sqrt{\lambda_{1}}\left(\theta_{1}+2\pi\ri
 Então temos
 
 \[
-\boldsymbol{\Theta_{1}(\theta_{1})=Ae^{im\theta_{1}}+Be^{-im\theta_{1}}}
+\boldsymbol{\Theta_{1,m}(\theta_{1})=Ae^{im\theta_{1}}+Be^{-im\theta_{1}}}
 \]
 
 
 \subsection{Continuando na outra equação}
 
 \[
-\frac{1}{W}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]=\lambda_{1}
+\frac{1}{W}\frac{\sin^{2}\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[cot(\theta_{2})\frac{\partial W}{\partial\theta_{2}}+\frac{\partial^{2}W}{\partial\theta_{2}^{2}}+tanh(\chi)\frac{\partial W}{\partial\chi}+\frac{\partial^{2}W}{\partial\chi^{2}}\right]=\lambda_{1}
 \]
 
 Fazendo 
@@ -191,47 +191,51 @@ W(\theta_{2},\chi)=\Theta_{2}(\theta_{2})X(\chi)
 \]
 
 \[
-\frac{1}{\Theta_{2}X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[Xcot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+X\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}+\Theta_{2}tanh(\chi)\frac{\partial X}{\partial\chi}+\Theta_{2}\frac{\partial^{2}X}{\partial\chi^{2}}\right]=\lambda_{1}
+\frac{1}{\Theta_{2}X}\frac{\sin^{2}\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[Xcot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+X\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}+\Theta_{2}tanh(\chi)\frac{\partial X}{\partial\chi}+\Theta_{2}\frac{\partial^{2}X}{\partial\chi^{2}}\right]=\lambda_{1}
 \]
 
 \[
-\frac{1}{\Theta_{2}X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[X\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\Theta_{2}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=\lambda_{1}
+\frac{1}{\Theta_{2}X}\frac{\sin^{2}\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[X\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\Theta_{2}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=\lambda_{1}
 \]
 
 \[
-\frac{1}{\Theta_{2}}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}
+\frac{1}{\Theta_{2}}\frac{\sin^{2}\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\frac{\sin^{2}\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}
 \]
 
 \[
-\frac{\sin\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=\lambda_{1}
+\frac{\sin^{2}\theta_{2}\cosh^{2}\chi}{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)\right]=\lambda_{1}
 \]
 
 \[
-\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}{\sin\theta_{2}\cosh^{2}\chi}
+\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}{\sin^{2}\theta_{2}\cosh^{2}\chi}
 \]
 
 Utilizando
 
 \[
-\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}{\sin^{2}\theta_{2}\cosh^{2}\chi}=\frac{1}{\sin^{2}\theta_{2}}+\frac{1}{\cosh^{2}\chi}
+\frac{\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}{\sin^{2}\theta_{2}\cosh^{2}\chi}=\frac{\sinh^{2}\chi}{\sin^{2}\theta_{2}\cosh^{2}\chi}+\frac{\cos^{2}\theta_{2}}{\sin^{2}\theta_{2}\cosh^{2}\chi}=\frac{\cosh^{2}\chi}{\sin^{2}\theta_{2}\cosh^{2}\chi}-\frac{1}{\sin^{2}\theta_{2}\cosh^{2}\chi}+\frac{1}{\sin^{2}\theta_{2}\cosh^{2}\chi}-\frac{\sin^{2}\theta_{2}}{\sin^{2}\theta_{2}\cosh^{2}\chi}
+\]
+
+\[
+=\frac{\cosh^{2}\chi}{\sin^{2}\theta_{2}\cosh^{2}\chi}-\frac{\sin^{2}\theta_{2}}{\sin^{2}\theta_{2}\cosh^{2}\chi}=\frac{1}{\sin^{2}\theta_{2}}-\frac{1}{\cosh^{2}\chi}
 \]
 
 Tem-se
 
 \[
-\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}\left(\frac{1}{\sin^{2}\theta_{2}}+\frac{1}{\cosh^{2}\chi}\right)
+\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\lambda_{1}\left(\frac{1}{\sin^{2}\theta_{2}}-\frac{1}{\cosh^{2}\chi}\right)
 \]
 
 \[
-\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\frac{\lambda_{1}}{\sin^{2}\theta_{2}}+\frac{\lambda_{1}}{\cosh^{2}\chi}
+\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)=\frac{\lambda_{1}}{\sin^{2}\theta_{2}}-\frac{\lambda_{1}}{\cosh^{2}\chi}
 \]
 
 \[
--\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}-\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)+\frac{\lambda_{1}}{\cosh^{2}\chi}=0
+-\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}-\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)-\frac{\lambda_{1}}{\cosh^{2}\chi}=0
 \]
 
 \[
--\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}=\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)-\frac{\lambda_{1}}{\cosh^{2}\chi}
+-\frac{1}{\Theta_{2}}\left(cot(\theta_{2})\frac{\partial\Theta_{2}}{\partial\theta_{2}}+\frac{\partial^{2}\Theta_{2}}{\partial\theta_{2}^{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}=\frac{1}{X}\left(tanh(\chi)\frac{\partial X}{\partial\chi}+\frac{\partial^{2}X}{\partial\chi^{2}}\right)+\frac{\lambda_{1}}{\cosh^{2}\chi}
 \]
 
 Nota-se que
@@ -249,7 +253,7 @@ Nota-se que
 Então
 
 \[
--\frac{1}{\Theta_{2}sin(\theta_{2})}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial\Theta_{2}}{\partial\theta_{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}=\frac{1}{X\cosh\chi}\frac{\partial}{\partial\chi}\left(\cosh\chi\frac{\partial X}{\partial\chi}\right)-\frac{\lambda_{1}}{\cosh^{2}\chi}=\lambda_{2}
+-\frac{1}{\Theta_{2}sin(\theta_{2})}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial\Theta_{2}}{\partial\theta_{2}}\right)+\frac{\lambda_{1}}{\sin^{2}\theta_{2}}=\frac{1}{X\cosh\chi}\frac{\partial}{\partial\chi}\left(\cosh\chi\frac{\partial X}{\partial\chi}\right)+\frac{\lambda_{1}}{\cosh^{2}\chi}=\lambda_{2}
 \]
 
 \[
@@ -257,7 +261,7 @@ Então
 \]
 
 \[
-\frac{1}{X\cosh\chi}\frac{\partial}{\partial\chi}\left(\cosh\chi\frac{\partial X}{\partial\chi}\right)-\frac{\lambda_{1}}{\cosh^{2}\chi}=\lambda_{2}
+\frac{1}{X\cosh\chi}\frac{\partial}{\partial\chi}\left(\cosh\chi\frac{\partial X}{\partial\chi}\right)+\frac{\lambda_{1}}{\cosh^{2}\chi}=\lambda_{2}
 \]
 
 Pode-se escrever
@@ -267,24 +271,101 @@ Pode-se escrever
 \]
 
 \[
-\frac{1}{\cosh\chi}\frac{d}{d\chi}\left(\cosh\chi\frac{dX}{d\chi}\right)-\left(\lambda_{2}+\frac{\lambda_{1}}{\cosh^{2}\chi}\right)X=0
+\frac{1}{\cosh\chi}\frac{d}{d\chi}\left(\cosh\chi\frac{dX}{d\chi}\right)+\left(-\lambda_{2}+\frac{\lambda_{1}}{\cosh^{2}\chi}\right)X=0
 \]
 
 
 \subsection{Resolvendo para $\Theta_{2}$}
 
 \[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta}\left(\sin\theta_{2}\frac{\partial\Theta_{2}}{\partial\theta_{2}}\right)+\left(\lambda_{2}-\frac{m^{2}}{\sin^{2}\theta_{2}}\right)\Theta_{2}=0
+\]
+
+
+\subsubsection{Caso em que $m=0$}
+
+\[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\lambda_{2}\Theta_{2}=0
+\]
+
+Fazendo $x=cos\theta_{2},\,x\in[1,\,-1]$
+
+\[
+sin^{2}(\theta_{2})=1-cos^{2}(\theta_{2})=1-x^{2}
+\]
+
+\[
+\frac{d\Theta_{2}}{d\theta_{2}}=\frac{d\Theta_{2}}{dx}\frac{dx}{d\theta_{2}}=\frac{d\Theta_{2}}{dx}\left(-sin(\theta_{2})\right)
+\]
+
+\[
+\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)=\frac{d}{d\theta_{2}}\left(-sin^{2}(\theta_{2})\frac{d\Theta_{2}}{dx}\right)=-2cos\theta_{2}sin\theta_{2}\frac{d\Theta_{2}}{dx}-sin^{2}(\theta_{2})\frac{d}{d\theta_{2}}\frac{d\Theta_{2}}{dx}
+\]
+
+\[
+=-2cos\theta_{2}sin\theta_{2}\frac{d\Theta_{2}}{dx}-sin^{2}(\theta_{2})\frac{d}{dx}\frac{d\Theta_{2}}{d\theta_{2}}=-2cos\theta_{2}sin\theta_{2}\frac{d\Theta_{2}}{dx}+sin^{3}(\theta_{2})\frac{d^{2}\Theta_{2}}{dx^{2}}
+\]
+
+\[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)\Rightarrow\frac{1}{sin(\theta_{2})}\left(-2cos\theta_{2}sin\theta_{2}\frac{d\Theta_{2}}{dx}+sin^{3}(\theta_{2})\frac{d^{2}\Theta_{2}}{dx^{2}}\right)=-2cos\theta_{2}\frac{d\Theta_{2}}{dx}+sin^{2}(\theta_{2})\frac{d^{2}\Theta_{2}}{dx^{2}}
+\]
+
+Então ficamos com
+
+\[
+\frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\lambda_{2}\Theta_{2}=0\Rightarrow-2cos\theta_{2}\frac{d\Theta_{2}}{dx}+sin^{2}(\theta_{2})\frac{d^{2}\Theta_{2}}{dx^{2}}+\lambda_{2}\Theta_{2}=0
+\]
+
+\[
+\left(1-x^{2}\right)\frac{d^{2}\Theta_{2}}{dx^{2}}-2x\frac{d\Theta_{2}}{dx}+\lambda_{2}\Theta_{2}=0
+\]
+
+Essa equação tem soluções não singulares quando $\lambda_{2}=n(n+1),\,n\in\mathbb{Z}_{+}$.
+
+\[
+\left(1-x^{2}\right)\frac{d^{2}\Theta_{2}}{dx^{2}}-2x\frac{d\Theta_{2}}{dx}+n(n+1)\Theta_{2}=0
+\]
+
+Chagou-se na Equação de Legendre, a solução dessa equação é expressa
+em termos dos Polinômios de Legendre de modo que
+
+\textbf{
+\[
+\boldsymbol{\Theta_{2,n}(x)=c_{1}P_{n}(x)+c_{2}Q_{n}(x)}
+\]
+}
+
+Onde $P_{n}(x)$ são Polinômios de Legendre de primeira espécie e
+os $Q_{n}(x)$ são polinômios de legendre de segunda espécie.
+
+\textbf{OBS: Se a solução tiver que ser limitada em $[-1,1]$ ela
+se torna }$\boldsymbol{\Theta_{2,n}(x)=c_{1}P_{n}(x)}$ pois 
+
+\[
+\lim_{x\to1^{-}}Q_{n}(x)=+\infty
+\]
+
+\[
+\lim_{x\to-1^{+}}Q_{n}(x)=\left(-1\right)^{n+1}\infty
+\]
+
+\textbf{Como o intervalo no caso é }$[1,\,-1]$ \textbf{pode-se manter
+a solução na forma descrita acima.}
+
+\subsubsection{Caso em que $m\protect\neq0$}
+
+\[
 \frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\left(\lambda_{2}-\frac{m^{2}}{\sin^{2}\theta_{2}}\right)\Theta_{2}=0
 \]
 
-Determina-se $\lambda_{2}=n(n+1),\,n\in\mathbb{Z}_{+}$ de modo que
-tem-se
+Aplicando o termo encontrado$\lambda_{2}=n(n+1),\,n\in\mathbb{Z}_{+}$
+de modo que tem-se
 
 \[
 \frac{1}{sin(\theta_{2})}\frac{d}{d\theta_{2}}\left(\sin\theta_{2}\frac{d\Theta_{2}}{d\theta_{2}}\right)+\left(n(n+1)-\frac{m^{2}}{\sin^{2}\theta_{2}}\right)\Theta_{2}=0
 \]
 
-Fazendo $x=cos\theta_{2}$
+Fazendo $x=cos\theta_{2},\,x\in[1,\,-1]$
 
 \[
 sin^{2}(\theta_{2})=1-cos^{2}(\theta_{2})=1-x^{2}
@@ -323,32 +404,25 @@ Tem-se
 \\
 
 Essa é a \textbf{Equação de Legendre Generalizada} e suas soluções,
-para $m,n\in\mathbb{Z}$, são dadas em termos de Polinômios Associados
+para $m,n\in\mathbb{Z}$, são dadas em termos de Funções Associadas
 de Legendre.\\
 
+\textbf{
 \[
-\Theta_{2,n,m}(x)=P_{n}^{m}(x)
+\boldsymbol{\Theta_{2,n,m}(x)=c_{1}P_{n}^{m}(x)+c_{2}Q_{n}^{m}(x)}
 \]
-\\
-
-Quando $m=0$ tem-se o caso especial em que a solução reduz-se a um
-Polinômio de Legendre\\
-
-\[
-\Theta_{2,n,0}(x)=P_{n}^{0}(x)=P_{n}(x)
-\]
-
+}
 
 \subsection{Olhando para $\chi$}
 
 \[
-\frac{1}{\cosh\chi}\frac{d}{d\chi}\left(\cosh\chi\frac{dX}{d\chi}\right)-\left(\lambda_{2}+\frac{\lambda_{1}}{\cosh^{2}\chi}\right)X=0
+\frac{1}{\cosh\chi}\frac{d}{d\chi}\left(\cosh\chi\frac{dX}{d\chi}\right)+\left(-\lambda_{2}+\frac{\lambda_{1}}{\cosh^{2}\chi}\right)X=0
 \]
 
-Fazendo $\zeta=\sinh\chi$ tem-se
+Fazendo $\zeta=\sinh\chi,\,\zeta\in[0,\,\infty)$ tem-se
 
 \[
-cosh^{2}(\chi)=1-sinh^{2}(\chi)=1-\zeta^{2}
+cosh^{2}(\chi)=1+sinh^{2}(\chi)=1+\zeta^{2}
 \]
 \\
 
@@ -370,11 +444,76 @@ cosh^{2}(\chi)=1-sinh^{2}(\chi)=1-\zeta^{2}
 \]
 \\
 
-Então, considerando $\lambda_{1}=m^{2}$ e $\lambda_{2}=n(n+1)$,
+Então, levando em conta $\lambda_{1}=m^{2}$ e $\lambda_{2}=n(n+1)$,
 chega-se em:\\
 
 \[
-\left(1-\zeta^{2}\right)\frac{d^{2}X}{d\zeta^{2}}+2\zeta\frac{dX}{d\zeta}-\left(n(n+1)+\frac{m^{2}}{\left(1-\zeta^{2}\right)}\right)X=0
+\left(1+\zeta^{2}\right)\frac{d^{2}X}{d\zeta^{2}}+2\zeta\frac{dX}{d\zeta}+\left(-n(n+1)+\frac{m^{2}}{\left(1+\zeta^{2}\right)}\right)X=0
+\]
+
+Aplicando $\alpha=i\zeta,\,\,i^{2}=-1$.
+
+Veja que
+
+\[
+\alpha=i\zeta\Rightarrow\alpha^{2}=i^{2}\zeta^{2}\Rightarrow-\alpha^{2}=\zeta^{2}
+\]
+
+\[
+\frac{dX}{d\zeta}=\frac{dX}{d\alpha}\frac{d\alpha}{d\zeta}=\frac{dX}{d\alpha}i\Rightarrow\frac{d^{2}X}{d\zeta^{2}}=\frac{d}{d\zeta}\frac{dX}{d\zeta}=i\frac{d}{d\zeta}\frac{dX}{d\alpha}=i\frac{d}{d\alpha}\frac{dX}{d\zeta}=-\frac{d^{2}X}{d\alpha^{2}}
+\]
+
+\[
+2\zeta\frac{dX}{d\zeta}\Rightarrow2i\zeta\frac{dX}{d\alpha}=2\alpha\frac{dX}{d\alpha}
+\]
+
+Substituindo esse resultado na Equação
+
+\[
+-\left(1-\alpha^{2}\right)\frac{d^{2}X}{d\alpha^{2}}+2\alpha\frac{dX}{d\alpha}+\left(-n(n+1)+\frac{m^{2}}{\left(1-\alpha^{2}\right)}\right)X=0
+\]
+
+Multiplicando ambos os lados por $-1$
+
+\[
+\left(1-\alpha^{2}\right)\frac{d^{2}X}{d\alpha^{2}}-2\alpha\frac{dX}{d\alpha}+\left(n(n+1)-\frac{m^{2}}{\left(1-\alpha^{2}\right)}\right)X=0
+\]
+
+Essa é, novamente, a Equação de Legendre. Como visto anteriormente
+pode-se analisa-la em dois casos.
+
+\subsubsection{Caso $m=0$\protect \\
+\textmd{Para esse caso, como já determinando antes, a solução é}}
+
+\[
+\boldsymbol{X_{n}(x)=c_{3}P_{n}(\alpha)+c_{4}Q_{n}(\alpha)}
+\]
+
+
+\subsubsection{Caso $m\protect\ne0$\textmd{}\protect \\
+\textmd{Para esse caso, como já determinando antes, a solução é}}
+
+\[
+\boldsymbol{X_{n,m}(x)=c_{3}P_{n}^{m}(\alpha)+c_{4}Q_{n}^{m}(\alpha)}
+\]
+
+
+\subsection{Conclusão}
+
+Conclui-se que a solução da Equação
+
+\[
+\nabla^{2}u=\frac{1}{a^{2}\left(\sinh^{2}\chi+\cos^{2}\theta_{2}\right)}\left[\frac{1}{\sin\theta_{2}}\frac{\partial}{\partial\theta_{2}}\left(\sin\theta_{2}\frac{\partial u}{\partial\theta_{2}}\right)+\frac{1}{\cosh\chi}\frac{\partial}{\partial\chi}\left(\cosh\chi\frac{\partial u}{\partial\chi}\right)\right]+\frac{1}{a^{2}\sin^{2}\theta_{2}\cosh^{2}\chi}\frac{\partial^{2}u}{\partial\theta_{1}^{2}}=0
+\]
+
+Pode ser dada por
+
+\[
+u(\theta_{1},\theta_{2},\chi)=\Theta_{1}(\theta_{1})\Theta_{2}(x)X(\alpha)
+\]
+
+\[
+\boldsymbol{u(\theta_{1},\theta_{2},\chi)=\sum_{n=0}^{\infty}\sum_{m=0}^{\infty}\Theta_{1,m}(\theta_{1})\Theta_{2,m,n}(x)X_{m,n}(\alpha)}
 \]
 
 \end{document}

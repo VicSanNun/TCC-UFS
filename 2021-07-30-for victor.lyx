@@ -389,10 +389,6 @@ e chega a eq na var
  : escreva a eq !
 \end_layout
 
-\begin_layout Standard
-
-\end_layout
-
 \begin_layout Subsubsection
 Caso em que 
 \begin_inset Formula $m=0$
